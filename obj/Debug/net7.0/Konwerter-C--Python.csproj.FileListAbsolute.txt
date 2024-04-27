@@ -1,0 +1,17 @@
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\bin\Debug\net7.0\Konwerter-C--Python.exe
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\bin\Debug\net7.0\Konwerter-C--Python.deps.json
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\bin\Debug\net7.0\Konwerter-C--Python.runtimeconfig.json
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\bin\Debug\net7.0\Konwerter-C--Python.dll
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\bin\Debug\net7.0\Konwerter-C--Python.pdb
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\bin\Debug\net7.0\Antlr4.Runtime.Standard.dll
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.csproj.AssemblyReference.cache
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.AssemblyInfoInputs.cache
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.AssemblyInfo.cs
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.csproj.CoreCompileInputs.cache
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.csproj.CopyComplete
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.dll
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\refint\Konwerter-C--Python.dll
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.pdb
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\Konwerter-C--Python.genruntimeconfig.cache
+C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\obj\Debug\net7.0\ref\Konwerter-C--Python.dll
