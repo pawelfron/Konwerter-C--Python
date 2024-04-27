@@ -7,5 +7,8 @@ Projekt ma konwertować kod napisany w uproszczonym wariancie języka C do Pytho
 # Implementacja
 Konwerter będzie napisany w C#, z użyciem narzędzia [ANTLR4](https://www.antlr.org/index.html)
 
+# Gramatyka
+[gramatyka](CGrammar.g4)
+
 # Autorzy
 Paweł Froń, Jakub Grzyb
