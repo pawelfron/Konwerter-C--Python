@@ -5,9 +5,7 @@ program
     ;
 
 includeStatement
-    : Include
-        (StringLiteral | IncludeLiteral)
-        ('\n' | '\r')
+    : Include IncludeLiteral
     ;
 
 declaration
@@ -23,13 +21,14 @@ structDeclaration
     ;
 
 functionDeclaration
-    : type Identifier LeftRound (type Identifier)* RightRound
+    : type Identifier 
+        LeftRound (type Identifier (Comma type Identifier)*)? RightRound
         (statement | Semicolon)
     ;
 
 variableDeclaration
     : Const? type Identifier
-        (assignOperator (lvalue | rvalue))?
+        (assignOperator expression)?
         Semicolon
     ;
 
@@ -39,6 +38,9 @@ statement
     | If LeftRound expression RightRound statement
         (Else statement)?
     | While LeftRound expression RightRound statement
+    | Do statement
+        While LeftRound expression RightRound
+        Semicolon
     | For LeftRound
         (expression Semicolon | variableDeclaration)
         expression Semicolon
@@ -52,23 +54,12 @@ statement
     ;
 
 expression
-    : lvalue
-    | rvalue?
-    ;
-
-lvalue
-    : LeftRound lvalue RightRound
-    | lvalue Access Identifier
-    | Multiply pointer
-    | pointer AccessPointer Identifier
-    | lvalue LeftSquare rvalue RightSquare
-    | StringLiteral
-    | Identifier
+    : rvalue?
     ;
 
 rvalue
     : LeftRound rvalue RightRound
-    | lvalue LeftRound rvalue? RightRound
+    | lvalue LeftRound expression RightRound
     | Address lvalue
     | (Add | Subtract | Not ) rvalue
     | LeftRound type RightRound rvalue
@@ -80,9 +71,20 @@ rvalue
     | rvalue Or rvalue
     | lvalue assignOperator rvalue
     | rvalue Comma rvalue
+    | lvalue
     | IntLiteral
     | FloatLiteral
     | CharLiteral
+    | Identifier
+    ;
+
+lvalue
+    : LeftRound lvalue RightRound
+    | lvalue Access Identifier
+    | Multiply pointer
+    | pointer AccessPointer Identifier
+    | lvalue LeftSquare rvalue RightSquare
+    | StringLiteral
     | Identifier
     ;
 
@@ -117,30 +119,31 @@ assignOperator
     | AssignModulo
     ;
 
-Include             : '#include';
+Include         : '#include';
 
-If                  : 'if';
-Else                : 'else';
-For                 : 'for';
-While               : 'while';
-Continue            : 'continue';
-Break               : 'break';
-Return              : 'return';
-Const               : 'const';
-Struct              : 'struct';
+If              : 'if';
+Else            : 'else';
+For             : 'for';
+While           : 'while';
+Do              : 'do';
+Continue        : 'continue';
+Break           : 'break';
+Return          : 'return';
+Const           : 'const';
+Struct          : 'struct';
 
-Char                : 'char';
-Short               : 'short';
-Int                 : 'int';
-Long                : 'long';
-Float               : 'float';
-Double              : 'double';
-Void                : 'void';
+Char            : 'char';
+Short           : 'short';
+Int             : 'int';
+Long            : 'long';
+Float           : 'float';
+Double          : 'double';
+Void            : 'void';
 
+IncludeLiteral  : [<"] ~[<>"' \t\r\n\f]+ [>"];
 Identifier      : [a-zA-Z_] [a-zA-Z_0-9]*;
 CharLiteral     : '\'' (~['\r\n] | '\\\'') '\'';
 StringLiteral   : '"' (~["\r\n] | '\\"')+ '"';
-IncludeLiteral  : '<' ~[<>"' \t\r\n\f]+ '>';
 IntLiteral      : [0-9]+;
 FloatLiteral    : [0-9]+ '.' [0-9]+;
 
@@ -184,4 +187,3 @@ Colon           : ':';
 Comma           : ',';
 
 Whitespace      : [ \t\r\n\f]+ -> skip;
-
