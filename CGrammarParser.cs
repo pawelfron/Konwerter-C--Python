@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from c://Users//Mateusz//Documents//studia//kompilatory//Konwerter-C--Python//CGrammar.g4 by ANTLR 4.13.1
+// Generated from /home/pawel/Desktop/university/compilers/Konwerter-C--Python/CGrammar.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -36,45 +36,45 @@ public partial class CGrammarParser : Parser {
 	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
-		T__0=1, T__1=2, Include=3, If=4, Else=5, For=6, While=7, Continue=8, Break=9, 
-		Return=10, Const=11, Struct=12, Char=13, Short=14, Int=15, Long=16, Float=17, 
-		Double=18, Void=19, Identifier=20, CharLiteral=21, StringLiteral=22, IncludeLiteral=23, 
-		IntLiteral=24, FloatLiteral=25, Access=26, AccessPointer=27, Address=28, 
-		Assign=29, AssignAdd=30, AssignSubtract=31, AssignMultiply=32, AssignDivide=33, 
-		AssignModulo=34, Add=35, Subtract=36, Multiply=37, Divide=38, Modulo=39, 
-		Equal=40, NotEqual=41, Less=42, LessOrEqual=43, Greater=44, GreaterOrEqual=45, 
-		And=46, Or=47, Not=48, LeftRound=49, RightRound=50, LeftSquare=51, RightSquare=52, 
-		LeftCurly=53, RightCurly=54, Semicolon=55, Colon=56, Comma=57, Whitespace=58;
+		Include=1, If=2, Else=3, For=4, While=5, Do=6, Continue=7, Break=8, Return=9, 
+		Const=10, Struct=11, Char=12, Short=13, Int=14, Long=15, Float=16, Double=17, 
+		Void=18, IncludeLiteral=19, Identifier=20, CharLiteral=21, StringLiteral=22, 
+		IntLiteral=23, FloatLiteral=24, Access=25, AccessPointer=26, Address=27, 
+		Assign=28, AssignAdd=29, AssignSubtract=30, AssignMultiply=31, AssignDivide=32, 
+		AssignModulo=33, Add=34, Subtract=35, Multiply=36, Divide=37, Modulo=38, 
+		Equal=39, NotEqual=40, Less=41, LessOrEqual=42, Greater=43, GreaterOrEqual=44, 
+		And=45, Or=46, Not=47, LeftRound=48, RightRound=49, LeftSquare=50, RightSquare=51, 
+		LeftCurly=52, RightCurly=53, Semicolon=54, Colon=55, Comma=56, Whitespace=57;
 	public const int
 		RULE_program = 0, RULE_includeStatement = 1, RULE_declaration = 2, RULE_structDeclaration = 3, 
 		RULE_functionDeclaration = 4, RULE_variableDeclaration = 5, RULE_statement = 6, 
-		RULE_expression = 7, RULE_lvalue = 8, RULE_rvalue = 9, RULE_pointer = 10, 
+		RULE_expression = 7, RULE_rvalue = 8, RULE_lvalue = 9, RULE_pointer = 10, 
 		RULE_type = 11, RULE_assignOperator = 12;
 	public static readonly string[] ruleNames = {
 		"program", "includeStatement", "declaration", "structDeclaration", "functionDeclaration", 
-		"variableDeclaration", "statement", "expression", "lvalue", "rvalue", 
+		"variableDeclaration", "statement", "expression", "rvalue", "lvalue", 
 		"pointer", "type", "assignOperator"
 	};
 
 	private static readonly string[] _LiteralNames = {
-		null, "'\\n'", "'\\r'", "'#include'", "'if'", "'else'", "'for'", "'while'", 
-		"'continue'", "'break'", "'return'", "'const'", "'struct'", "'char'", 
-		"'short'", "'int'", "'long'", "'float'", "'double'", "'void'", null, null, 
-		null, null, null, null, "'.'", "'->'", "'&'", "'='", "'+='", "'-='", "'*='", 
-		"'/='", "'%='", "'+'", "'-'", "'*'", "'/'", "'%'", "'=='", "'!='", "'<'", 
-		"'<='", "'>'", "'>='", "'&&'", "'||'", "'!'", "'('", "')'", "'['", "']'", 
-		"'{'", "'}'", "';'", "':'", "','"
+		null, "'#include'", "'if'", "'else'", "'for'", "'while'", "'do'", "'continue'", 
+		"'break'", "'return'", "'const'", "'struct'", "'char'", "'short'", "'int'", 
+		"'long'", "'float'", "'double'", "'void'", null, null, null, null, null, 
+		null, "'.'", "'->'", "'&'", "'='", "'+='", "'-='", "'*='", "'/='", "'%='", 
+		"'+'", "'-'", "'*'", "'/'", "'%'", "'=='", "'!='", "'<'", "'<='", "'>'", 
+		"'>='", "'&&'", "'||'", "'!'", "'('", "')'", "'['", "']'", "'{'", "'}'", 
+		"';'", "':'", "','"
 	};
 	private static readonly string[] _SymbolicNames = {
-		null, null, null, "Include", "If", "Else", "For", "While", "Continue", 
-		"Break", "Return", "Const", "Struct", "Char", "Short", "Int", "Long", 
-		"Float", "Double", "Void", "Identifier", "CharLiteral", "StringLiteral", 
-		"IncludeLiteral", "IntLiteral", "FloatLiteral", "Access", "AccessPointer", 
-		"Address", "Assign", "AssignAdd", "AssignSubtract", "AssignMultiply", 
-		"AssignDivide", "AssignModulo", "Add", "Subtract", "Multiply", "Divide", 
-		"Modulo", "Equal", "NotEqual", "Less", "LessOrEqual", "Greater", "GreaterOrEqual", 
-		"And", "Or", "Not", "LeftRound", "RightRound", "LeftSquare", "RightSquare", 
-		"LeftCurly", "RightCurly", "Semicolon", "Colon", "Comma", "Whitespace"
+		null, "Include", "If", "Else", "For", "While", "Do", "Continue", "Break", 
+		"Return", "Const", "Struct", "Char", "Short", "Int", "Long", "Float", 
+		"Double", "Void", "IncludeLiteral", "Identifier", "CharLiteral", "StringLiteral", 
+		"IntLiteral", "FloatLiteral", "Access", "AccessPointer", "Address", "Assign", 
+		"AssignAdd", "AssignSubtract", "AssignMultiply", "AssignDivide", "AssignModulo", 
+		"Add", "Subtract", "Multiply", "Divide", "Modulo", "Equal", "NotEqual", 
+		"Less", "LessOrEqual", "Greater", "GreaterOrEqual", "And", "Or", "Not", 
+		"LeftRound", "RightRound", "LeftSquare", "RightSquare", "LeftCurly", "RightCurly", 
+		"Semicolon", "Colon", "Comma", "Whitespace"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -128,16 +128,6 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_program; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterProgram(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitProgram(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitProgram(this);
@@ -156,7 +146,7 @@ public partial class CGrammarParser : Parser {
 			State = 30;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 2095112L) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1571842L) != 0)) {
 				{
 				State = 28;
 				ErrorHandler.Sync(this);
@@ -207,23 +197,12 @@ public partial class CGrammarParser : Parser {
 
 	public partial class IncludeStatementContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Include() { return GetToken(CGrammarParser.Include, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode StringLiteral() { return GetToken(CGrammarParser.StringLiteral, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode IncludeLiteral() { return GetToken(CGrammarParser.IncludeLiteral, 0); }
 		public IncludeStatementContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_includeStatement; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterIncludeStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitIncludeStatement(this);
-		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -236,30 +215,13 @@ public partial class CGrammarParser : Parser {
 	public IncludeStatementContext includeStatement() {
 		IncludeStatementContext _localctx = new IncludeStatementContext(Context, State);
 		EnterRule(_localctx, 2, RULE_includeStatement);
-		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
 			State = 35;
 			Match(Include);
 			State = 36;
-			_la = TokenStream.LA(1);
-			if ( !(_la==StringLiteral || _la==IncludeLiteral) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
-			State = 37;
-			_la = TokenStream.LA(1);
-			if ( !(_la==T__0 || _la==T__1) ) {
-			ErrorHandler.RecoverInline(this);
-			}
-			else {
-				ErrorHandler.ReportMatch(this);
-			    Consume();
-			}
+			Match(IncludeLiteral);
 			}
 		}
 		catch (RecognitionException re) {
@@ -289,16 +251,6 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_declaration; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterDeclaration(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitDeclaration(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitDeclaration(this);
@@ -311,27 +263,27 @@ public partial class CGrammarParser : Parser {
 		DeclarationContext _localctx = new DeclarationContext(Context, State);
 		EnterRule(_localctx, 4, RULE_declaration);
 		try {
-			State = 42;
+			State = 41;
 			ErrorHandler.Sync(this);
 			switch ( Interpreter.AdaptivePredict(TokenStream,2,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 39;
+				State = 38;
 				functionDeclaration();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 40;
+				State = 39;
 				structDeclaration();
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 41;
+				State = 40;
 				variableDeclaration();
 				}
 				break;
@@ -372,16 +324,6 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_structDeclaration; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterStructDeclaration(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitStructDeclaration(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitStructDeclaration(this);
@@ -397,49 +339,49 @@ public partial class CGrammarParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 44;
+			State = 43;
 			Match(Struct);
-			State = 45;
+			State = 44;
 			Match(Identifier);
-			State = 55;
+			State = 54;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==LeftCurly) {
 				{
-				State = 46;
+				State = 45;
 				Match(LeftCurly);
-				State = 51;
+				State = 50;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 2095104L) != 0)) {
+				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1571840L) != 0)) {
 					{
-					State = 49;
+					State = 48;
 					ErrorHandler.Sync(this);
 					switch ( Interpreter.AdaptivePredict(TokenStream,3,Context) ) {
 					case 1:
 						{
-						State = 47;
+						State = 46;
 						variableDeclaration();
 						}
 						break;
 					case 2:
 						{
-						State = 48;
+						State = 47;
 						structDeclaration();
 						}
 						break;
 					}
 					}
-					State = 53;
+					State = 52;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
-				State = 54;
+				State = 53;
 				Match(RightCurly);
 				}
 			}
 
-			State = 57;
+			State = 56;
 			Match(Semicolon);
 			}
 		}
@@ -471,21 +413,15 @@ public partial class CGrammarParser : Parser {
 			return GetRuleContext<StatementContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Semicolon() { return GetToken(CGrammarParser.Semicolon, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(CGrammarParser.Comma); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
+			return GetToken(CGrammarParser.Comma, i);
+		}
 		public FunctionDeclarationContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_functionDeclaration; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterFunctionDeclaration(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitFunctionDeclaration(this);
-		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -502,42 +438,56 @@ public partial class CGrammarParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 59;
+			State = 58;
 			type(0);
-			State = 60;
+			State = 59;
 			Match(Identifier);
-			State = 61;
+			State = 60;
 			Match(LeftRound);
-			State = 67;
+			State = 72;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 2093056L) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 1570816L) != 0)) {
 				{
-				{
-				State = 62;
+				State = 61;
 				type(0);
-				State = 63;
+				State = 62;
 				Match(Identifier);
-				}
-				}
 				State = 69;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
+				while (_la==Comma) {
+					{
+					{
+					State = 63;
+					Match(Comma);
+					State = 64;
+					type(0);
+					State = 65;
+					Match(Identifier);
+					}
+					}
+					State = 71;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+				}
+				}
 			}
-			State = 70;
+
+			State = 74;
 			Match(RightRound);
-			State = 73;
+			State = 77;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,7,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,8,Context) ) {
 			case 1:
 				{
-				State = 71;
+				State = 75;
 				statement();
 				}
 				break;
 			case 2:
 				{
-				State = 72;
+				State = 76;
 				Match(Semicolon);
 				}
 				break;
@@ -565,27 +515,14 @@ public partial class CGrammarParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public AssignOperatorContext assignOperator() {
 			return GetRuleContext<AssignOperatorContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public LvalueContext lvalue() {
-			return GetRuleContext<LvalueContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public RvalueContext rvalue() {
-			return GetRuleContext<RvalueContext>(0);
+		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
 		}
 		public VariableDeclarationContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_variableDeclaration; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterVariableDeclaration(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitVariableDeclaration(this);
-		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -602,47 +539,33 @@ public partial class CGrammarParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 76;
+			State = 80;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Const) {
 				{
-				State = 75;
+				State = 79;
 				Match(Const);
 				}
 			}
 
-			State = 78;
+			State = 82;
 			type(0);
-			State = 79;
+			State = 83;
 			Match(Identifier);
-			State = 85;
+			State = 87;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 33822867456L) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 16911433728L) != 0)) {
 				{
-				State = 80;
+				State = 84;
 				assignOperator();
-				State = 83;
-				ErrorHandler.Sync(this);
-				switch ( Interpreter.AdaptivePredict(TokenStream,9,Context) ) {
-				case 1:
-					{
-					State = 81;
-					lvalue(0);
-					}
-					break;
-				case 2:
-					{
-					State = 82;
-					rvalue(0);
-					}
-					break;
-				}
+				State = 85;
+				expression();
 				}
 			}
 
-			State = 87;
+			State = 89;
 			Match(Semicolon);
 			}
 		}
@@ -681,11 +604,12 @@ public partial class CGrammarParser : Parser {
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Else() { return GetToken(CGrammarParser.Else, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode While() { return GetToken(CGrammarParser.While, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode For() { return GetToken(CGrammarParser.For, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Do() { return GetToken(CGrammarParser.Do, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Semicolon() { return GetTokens(CGrammarParser.Semicolon); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Semicolon(int i) {
 			return GetToken(CGrammarParser.Semicolon, i);
 		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode For() { return GetToken(CGrammarParser.For, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Break() { return GetToken(CGrammarParser.Break, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Continue() { return GetToken(CGrammarParser.Continue, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Return() { return GetToken(CGrammarParser.Return, 0); }
@@ -696,16 +620,6 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_statement; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterStatement(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitStatement(this);
-		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -720,44 +634,44 @@ public partial class CGrammarParser : Parser {
 		EnterRule(_localctx, 12, RULE_statement);
 		int _la;
 		try {
-			State = 139;
+			State = 149;
 			ErrorHandler.Sync(this);
 			switch ( Interpreter.AdaptivePredict(TokenStream,14,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 89;
+				State = 91;
 				structDeclaration();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 90;
+				State = 92;
 				variableDeclaration();
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 91;
-				Match(If);
-				State = 92;
-				Match(LeftRound);
 				State = 93;
-				expression();
+				Match(If);
 				State = 94;
-				Match(RightRound);
+				Match(LeftRound);
 				State = 95;
+				expression();
+				State = 96;
+				Match(RightRound);
+				State = 97;
 				statement();
-				State = 98;
+				State = 100;
 				ErrorHandler.Sync(this);
 				switch ( Interpreter.AdaptivePredict(TokenStream,11,Context) ) {
 				case 1:
 					{
-					State = 96;
+					State = 98;
 					Match(Else);
-					State = 97;
+					State = 99;
 					statement();
 					}
 					break;
@@ -767,113 +681,132 @@ public partial class CGrammarParser : Parser {
 			case 4:
 				EnterOuterAlt(_localctx, 4);
 				{
-				State = 100;
-				Match(While);
-				State = 101;
-				Match(LeftRound);
 				State = 102;
-				expression();
+				Match(While);
 				State = 103;
-				Match(RightRound);
+				Match(LeftRound);
 				State = 104;
+				expression();
+				State = 105;
+				Match(RightRound);
+				State = 106;
 				statement();
 				}
 				break;
 			case 5:
 				EnterOuterAlt(_localctx, 5);
 				{
-				State = 106;
-				Match(For);
-				State = 107;
+				State = 108;
+				Match(Do);
+				State = 109;
+				statement();
+				State = 110;
+				Match(While);
+				State = 111;
 				Match(LeftRound);
 				State = 112;
-				ErrorHandler.Sync(this);
-				switch ( Interpreter.AdaptivePredict(TokenStream,12,Context) ) {
-				case 1:
-					{
-					State = 108;
-					expression();
-					State = 109;
-					Match(Semicolon);
-					}
-					break;
-				case 2:
-					{
-					State = 111;
-					variableDeclaration();
-					}
-					break;
-				}
-				State = 114;
 				expression();
-				State = 115;
-				Match(Semicolon);
-				State = 116;
-				expression();
-				State = 117;
+				State = 113;
 				Match(RightRound);
-				State = 118;
-				statement();
+				State = 114;
+				Match(Semicolon);
 				}
 				break;
 			case 6:
 				EnterOuterAlt(_localctx, 6);
 				{
-				State = 120;
-				Match(Break);
-				State = 121;
+				State = 116;
+				Match(For);
+				State = 117;
+				Match(LeftRound);
+				State = 122;
+				ErrorHandler.Sync(this);
+				switch ( Interpreter.AdaptivePredict(TokenStream,12,Context) ) {
+				case 1:
+					{
+					State = 118;
+					expression();
+					State = 119;
+					Match(Semicolon);
+					}
+					break;
+				case 2:
+					{
+					State = 121;
+					variableDeclaration();
+					}
+					break;
+				}
+				State = 124;
+				expression();
+				State = 125;
 				Match(Semicolon);
+				State = 126;
+				expression();
+				State = 127;
+				Match(RightRound);
+				State = 128;
+				statement();
 				}
 				break;
 			case 7:
 				EnterOuterAlt(_localctx, 7);
 				{
-				State = 122;
-				Match(Continue);
-				State = 123;
+				State = 130;
+				Match(Break);
+				State = 131;
 				Match(Semicolon);
 				}
 				break;
 			case 8:
 				EnterOuterAlt(_localctx, 8);
 				{
-				State = 124;
-				Match(Return);
-				State = 125;
-				expression();
-				State = 126;
+				State = 132;
+				Match(Continue);
+				State = 133;
 				Match(Semicolon);
 				}
 				break;
 			case 9:
 				EnterOuterAlt(_localctx, 9);
 				{
-				State = 128;
-				Match(LeftCurly);
-				State = 132;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 45880662049161168L) != 0)) {
-					{
-					{
-					State = 129;
-					statement();
-					}
-					}
-					State = 134;
-					ErrorHandler.Sync(this);
-					_la = TokenStream.LA(1);
-				}
+				State = 134;
+				Match(Return);
 				State = 135;
-				Match(RightCurly);
+				expression();
+				State = 136;
+				Match(Semicolon);
 				}
 				break;
 			case 10:
 				EnterOuterAlt(_localctx, 10);
 				{
-				State = 136;
+				State = 138;
+				Match(LeftCurly);
+				State = 142;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				while ((((_la) & ~0x3f) == 0 && ((1L << _la) & 22940331028250612L) != 0)) {
+					{
+					{
+					State = 139;
+					statement();
+					}
+					}
+					State = 144;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+				}
+				State = 145;
+				Match(RightCurly);
+				}
+				break;
+			case 11:
+				EnterOuterAlt(_localctx, 11);
+				{
+				State = 146;
 				expression();
-				State = 137;
+				State = 147;
 				Match(Semicolon);
 				}
 				break;
@@ -891,9 +824,6 @@ public partial class CGrammarParser : Parser {
 	}
 
 	public partial class ExpressionContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public LvalueContext lvalue() {
-			return GetRuleContext<LvalueContext>(0);
-		}
 		[System.Diagnostics.DebuggerNonUserCode] public RvalueContext rvalue() {
 			return GetRuleContext<RvalueContext>(0);
 		}
@@ -902,16 +832,6 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_expression; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterExpression(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitExpression(this);
-		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -926,31 +846,18 @@ public partial class CGrammarParser : Parser {
 		EnterRule(_localctx, 14, RULE_expression);
 		int _la;
 		try {
-			State = 145;
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 152;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,16,Context) ) {
-			case 1:
-				EnterOuterAlt(_localctx, 1);
+			_la = TokenStream.LA(1);
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 422332890873856L) != 0)) {
 				{
-				State = 141;
-				lvalue(0);
+				State = 151;
+				rvalue(0);
 				}
-				break;
-			case 2:
-				EnterOuterAlt(_localctx, 2);
-				{
-				State = 143;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 844665774407680L) != 0)) {
-					{
-					State = 142;
-					rvalue(0);
-					}
-				}
+			}
 
-				}
-				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -960,167 +867,6 @@ public partial class CGrammarParser : Parser {
 		}
 		finally {
 			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class LvalueContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftRound() { return GetToken(CGrammarParser.LeftRound, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public LvalueContext lvalue() {
-			return GetRuleContext<LvalueContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightRound() { return GetToken(CGrammarParser.RightRound, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Multiply() { return GetToken(CGrammarParser.Multiply, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public PointerContext pointer() {
-			return GetRuleContext<PointerContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AccessPointer() { return GetToken(CGrammarParser.AccessPointer, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(CGrammarParser.Identifier, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode StringLiteral() { return GetToken(CGrammarParser.StringLiteral, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Access() { return GetToken(CGrammarParser.Access, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftSquare() { return GetToken(CGrammarParser.LeftSquare, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public RvalueContext rvalue() {
-			return GetRuleContext<RvalueContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightSquare() { return GetToken(CGrammarParser.RightSquare, 0); }
-		public LvalueContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_lvalue; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterLvalue(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitLvalue(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitLvalue(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-
-	[RuleVersion(0)]
-	public LvalueContext lvalue() {
-		return lvalue(0);
-	}
-
-	private LvalueContext lvalue(int _p) {
-		ParserRuleContext _parentctx = Context;
-		int _parentState = State;
-		LvalueContext _localctx = new LvalueContext(Context, _parentState);
-		LvalueContext _prevctx = _localctx;
-		int _startState = 16;
-		EnterRecursionRule(_localctx, 16, RULE_lvalue, _p);
-		try {
-			int _alt;
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 160;
-			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,17,Context) ) {
-			case 1:
-				{
-				State = 148;
-				Match(LeftRound);
-				State = 149;
-				lvalue(0);
-				State = 150;
-				Match(RightRound);
-				}
-				break;
-			case 2:
-				{
-				State = 152;
-				Match(Multiply);
-				State = 153;
-				pointer(0);
-				}
-				break;
-			case 3:
-				{
-				State = 154;
-				pointer(0);
-				State = 155;
-				Match(AccessPointer);
-				State = 156;
-				Match(Identifier);
-				}
-				break;
-			case 4:
-				{
-				State = 158;
-				Match(StringLiteral);
-				}
-				break;
-			case 5:
-				{
-				State = 159;
-				Match(Identifier);
-				}
-				break;
-			}
-			Context.Stop = TokenStream.LT(-1);
-			State = 172;
-			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,19,Context);
-			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-				if ( _alt==1 ) {
-					if ( ParseListeners!=null )
-						TriggerExitRuleEvent();
-					_prevctx = _localctx;
-					{
-					State = 170;
-					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,18,Context) ) {
-					case 1:
-						{
-						_localctx = new LvalueContext(_parentctx, _parentState);
-						PushNewRecursionContext(_localctx, _startState, RULE_lvalue);
-						State = 162;
-						if (!(Precpred(Context, 6))) throw new FailedPredicateException(this, "Precpred(Context, 6)");
-						State = 163;
-						Match(Access);
-						State = 164;
-						Match(Identifier);
-						}
-						break;
-					case 2:
-						{
-						_localctx = new LvalueContext(_parentctx, _parentState);
-						PushNewRecursionContext(_localctx, _startState, RULE_lvalue);
-						State = 165;
-						if (!(Precpred(Context, 3))) throw new FailedPredicateException(this, "Precpred(Context, 3)");
-						State = 166;
-						Match(LeftSquare);
-						State = 167;
-						rvalue(0);
-						State = 168;
-						Match(RightSquare);
-						}
-						break;
-					}
-					} 
-				}
-				State = 174;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,19,Context);
-			}
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			UnrollRecursionContexts(_parentctx);
 		}
 		return _localctx;
 	}
@@ -1136,6 +882,9 @@ public partial class CGrammarParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightRound() { return GetToken(CGrammarParser.RightRound, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public LvalueContext lvalue() {
 			return GetRuleContext<LvalueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ExpressionContext expression() {
+			return GetRuleContext<ExpressionContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Address() { return GetToken(CGrammarParser.Address, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Add() { return GetToken(CGrammarParser.Add, 0); }
@@ -1169,16 +918,6 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_rvalue; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterRvalue(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitRvalue(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitRvalue(this);
@@ -1196,155 +935,153 @@ public partial class CGrammarParser : Parser {
 		int _parentState = State;
 		RvalueContext _localctx = new RvalueContext(Context, _parentState);
 		RvalueContext _prevctx = _localctx;
-		int _startState = 18;
-		EnterRecursionRule(_localctx, 18, RULE_rvalue, _p);
+		int _startState = 16;
+		EnterRecursionRule(_localctx, 16, RULE_rvalue, _p);
 		int _la;
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 204;
+			State = 182;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,21,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,16,Context) ) {
 			case 1:
 				{
-				State = 176;
+				State = 155;
 				Match(LeftRound);
-				State = 177;
+				State = 156;
 				rvalue(0);
-				State = 178;
+				State = 157;
 				Match(RightRound);
 				}
 				break;
 			case 2:
 				{
-				State = 180;
+				State = 159;
 				lvalue(0);
-				State = 181;
+				State = 160;
 				Match(LeftRound);
-				State = 183;
-				ErrorHandler.Sync(this);
-				_la = TokenStream.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & 844665774407680L) != 0)) {
-					{
-					State = 182;
-					rvalue(0);
-					}
-				}
-
-				State = 185;
+				State = 161;
+				expression();
+				State = 162;
 				Match(RightRound);
 				}
 				break;
 			case 3:
 				{
-				State = 187;
+				State = 164;
 				Match(Address);
-				State = 188;
+				State = 165;
 				lvalue(0);
 				}
 				break;
 			case 4:
 				{
-				State = 189;
+				State = 166;
 				_la = TokenStream.LA(1);
-				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 281578055925760L) != 0)) ) {
+				if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 140789027962880L) != 0)) ) {
 				ErrorHandler.RecoverInline(this);
 				}
 				else {
 					ErrorHandler.ReportMatch(this);
 				    Consume();
 				}
-				State = 190;
-				rvalue(14);
+				State = 167;
+				rvalue(15);
 				}
 				break;
 			case 5:
 				{
-				State = 191;
+				State = 168;
 				Match(LeftRound);
-				State = 192;
+				State = 169;
 				type(0);
-				State = 193;
+				State = 170;
 				Match(RightRound);
-				State = 194;
-				rvalue(13);
+				State = 171;
+				rvalue(14);
 				}
 				break;
 			case 6:
 				{
-				State = 196;
+				State = 173;
 				lvalue(0);
-				State = 197;
+				State = 174;
 				assignOperator();
-				State = 198;
-				rvalue(6);
+				State = 175;
+				rvalue(7);
 				}
 				break;
 			case 7:
 				{
-				State = 200;
-				Match(IntLiteral);
+				State = 177;
+				lvalue(0);
 				}
 				break;
 			case 8:
 				{
-				State = 201;
-				Match(FloatLiteral);
+				State = 178;
+				Match(IntLiteral);
 				}
 				break;
 			case 9:
 				{
-				State = 202;
-				Match(CharLiteral);
+				State = 179;
+				Match(FloatLiteral);
 				}
 				break;
 			case 10:
 				{
-				State = 203;
+				State = 180;
+				Match(CharLiteral);
+				}
+				break;
+			case 11:
+				{
+				State = 181;
 				Match(Identifier);
 				}
 				break;
 			}
 			Context.Stop = TokenStream.LT(-1);
-			State = 229;
+			State = 207;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,23,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,18,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( ParseListeners!=null )
 						TriggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					State = 227;
+					State = 205;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,22,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,17,Context) ) {
 					case 1:
 						{
 						_localctx = new RvalueContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_rvalue);
-						State = 206;
-						if (!(Precpred(Context, 12))) throw new FailedPredicateException(this, "Precpred(Context, 12)");
-						State = 207;
+						State = 184;
+						if (!(Precpred(Context, 13))) throw new FailedPredicateException(this, "Precpred(Context, 13)");
+						State = 185;
 						_la = TokenStream.LA(1);
-						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 962072674304L) != 0)) ) {
+						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 481036337152L) != 0)) ) {
 						ErrorHandler.RecoverInline(this);
 						}
 						else {
 							ErrorHandler.ReportMatch(this);
 						    Consume();
 						}
-						State = 208;
-						rvalue(13);
+						State = 186;
+						rvalue(14);
 						}
 						break;
 					case 2:
 						{
 						_localctx = new RvalueContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_rvalue);
-						State = 209;
-						if (!(Precpred(Context, 11))) throw new FailedPredicateException(this, "Precpred(Context, 11)");
-						State = 210;
+						State = 187;
+						if (!(Precpred(Context, 12))) throw new FailedPredicateException(this, "Precpred(Context, 12)");
+						State = 188;
 						_la = TokenStream.LA(1);
 						if ( !(_la==Add || _la==Subtract) ) {
 						ErrorHandler.RecoverInline(this);
@@ -1353,36 +1090,36 @@ public partial class CGrammarParser : Parser {
 							ErrorHandler.ReportMatch(this);
 						    Consume();
 						}
-						State = 211;
-						rvalue(12);
+						State = 189;
+						rvalue(13);
 						}
 						break;
 					case 3:
 						{
 						_localctx = new RvalueContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_rvalue);
-						State = 212;
-						if (!(Precpred(Context, 10))) throw new FailedPredicateException(this, "Precpred(Context, 10)");
-						State = 213;
+						State = 190;
+						if (!(Precpred(Context, 11))) throw new FailedPredicateException(this, "Precpred(Context, 11)");
+						State = 191;
 						_la = TokenStream.LA(1);
-						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 65970697666560L) != 0)) ) {
+						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 32985348833280L) != 0)) ) {
 						ErrorHandler.RecoverInline(this);
 						}
 						else {
 							ErrorHandler.ReportMatch(this);
 						    Consume();
 						}
-						State = 214;
-						rvalue(11);
+						State = 192;
+						rvalue(12);
 						}
 						break;
 					case 4:
 						{
 						_localctx = new RvalueContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_rvalue);
-						State = 215;
-						if (!(Precpred(Context, 9))) throw new FailedPredicateException(this, "Precpred(Context, 9)");
-						State = 216;
+						State = 193;
+						if (!(Precpred(Context, 10))) throw new FailedPredicateException(this, "Precpred(Context, 10)");
+						State = 194;
 						_la = TokenStream.LA(1);
 						if ( !(_la==Equal || _la==NotEqual) ) {
 						ErrorHandler.RecoverInline(this);
@@ -1391,52 +1128,203 @@ public partial class CGrammarParser : Parser {
 							ErrorHandler.ReportMatch(this);
 						    Consume();
 						}
-						State = 217;
-						rvalue(10);
+						State = 195;
+						rvalue(11);
 						}
 						break;
 					case 5:
 						{
 						_localctx = new RvalueContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_rvalue);
-						State = 218;
-						if (!(Precpred(Context, 8))) throw new FailedPredicateException(this, "Precpred(Context, 8)");
-						State = 219;
+						State = 196;
+						if (!(Precpred(Context, 9))) throw new FailedPredicateException(this, "Precpred(Context, 9)");
+						State = 197;
 						Match(And);
-						State = 220;
-						rvalue(9);
+						State = 198;
+						rvalue(10);
 						}
 						break;
 					case 6:
 						{
 						_localctx = new RvalueContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_rvalue);
-						State = 221;
-						if (!(Precpred(Context, 7))) throw new FailedPredicateException(this, "Precpred(Context, 7)");
-						State = 222;
+						State = 199;
+						if (!(Precpred(Context, 8))) throw new FailedPredicateException(this, "Precpred(Context, 8)");
+						State = 200;
 						Match(Or);
-						State = 223;
-						rvalue(8);
+						State = 201;
+						rvalue(9);
 						}
 						break;
 					case 7:
 						{
 						_localctx = new RvalueContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_rvalue);
-						State = 224;
-						if (!(Precpred(Context, 5))) throw new FailedPredicateException(this, "Precpred(Context, 5)");
-						State = 225;
+						State = 202;
+						if (!(Precpred(Context, 6))) throw new FailedPredicateException(this, "Precpred(Context, 6)");
+						State = 203;
 						Match(Comma);
-						State = 226;
-						rvalue(6);
+						State = 204;
+						rvalue(7);
 						}
 						break;
 					}
 					} 
 				}
-				State = 231;
+				State = 209;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,23,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,18,Context);
+			}
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			UnrollRecursionContexts(_parentctx);
+		}
+		return _localctx;
+	}
+
+	public partial class LvalueContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftRound() { return GetToken(CGrammarParser.LeftRound, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public LvalueContext lvalue() {
+			return GetRuleContext<LvalueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightRound() { return GetToken(CGrammarParser.RightRound, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Multiply() { return GetToken(CGrammarParser.Multiply, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public PointerContext pointer() {
+			return GetRuleContext<PointerContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode AccessPointer() { return GetToken(CGrammarParser.AccessPointer, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Identifier() { return GetToken(CGrammarParser.Identifier, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode StringLiteral() { return GetToken(CGrammarParser.StringLiteral, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Access() { return GetToken(CGrammarParser.Access, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftSquare() { return GetToken(CGrammarParser.LeftSquare, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public RvalueContext rvalue() {
+			return GetRuleContext<RvalueContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightSquare() { return GetToken(CGrammarParser.RightSquare, 0); }
+		public LvalueContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_lvalue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitLvalue(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public LvalueContext lvalue() {
+		return lvalue(0);
+	}
+
+	private LvalueContext lvalue(int _p) {
+		ParserRuleContext _parentctx = Context;
+		int _parentState = State;
+		LvalueContext _localctx = new LvalueContext(Context, _parentState);
+		LvalueContext _prevctx = _localctx;
+		int _startState = 18;
+		EnterRecursionRule(_localctx, 18, RULE_lvalue, _p);
+		try {
+			int _alt;
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 223;
+			ErrorHandler.Sync(this);
+			switch ( Interpreter.AdaptivePredict(TokenStream,19,Context) ) {
+			case 1:
+				{
+				State = 211;
+				Match(LeftRound);
+				State = 212;
+				lvalue(0);
+				State = 213;
+				Match(RightRound);
+				}
+				break;
+			case 2:
+				{
+				State = 215;
+				Match(Multiply);
+				State = 216;
+				pointer(0);
+				}
+				break;
+			case 3:
+				{
+				State = 217;
+				pointer(0);
+				State = 218;
+				Match(AccessPointer);
+				State = 219;
+				Match(Identifier);
+				}
+				break;
+			case 4:
+				{
+				State = 221;
+				Match(StringLiteral);
+				}
+				break;
+			case 5:
+				{
+				State = 222;
+				Match(Identifier);
+				}
+				break;
+			}
+			Context.Stop = TokenStream.LT(-1);
+			State = 235;
+			ErrorHandler.Sync(this);
+			_alt = Interpreter.AdaptivePredict(TokenStream,21,Context);
+			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1 ) {
+					if ( ParseListeners!=null )
+						TriggerExitRuleEvent();
+					_prevctx = _localctx;
+					{
+					State = 233;
+					ErrorHandler.Sync(this);
+					switch ( Interpreter.AdaptivePredict(TokenStream,20,Context) ) {
+					case 1:
+						{
+						_localctx = new LvalueContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_lvalue);
+						State = 225;
+						if (!(Precpred(Context, 6))) throw new FailedPredicateException(this, "Precpred(Context, 6)");
+						State = 226;
+						Match(Access);
+						State = 227;
+						Match(Identifier);
+						}
+						break;
+					case 2:
+						{
+						_localctx = new LvalueContext(_parentctx, _parentState);
+						PushNewRecursionContext(_localctx, _startState, RULE_lvalue);
+						State = 228;
+						if (!(Precpred(Context, 3))) throw new FailedPredicateException(this, "Precpred(Context, 3)");
+						State = 229;
+						Match(LeftSquare);
+						State = 230;
+						rvalue(0);
+						State = 231;
+						Match(RightSquare);
+						}
+						break;
+					}
+					} 
+				}
+				State = 237;
+				ErrorHandler.Sync(this);
+				_alt = Interpreter.AdaptivePredict(TokenStream,21,Context);
 			}
 			}
 		}
@@ -1473,16 +1361,6 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_pointer; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterPointer(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitPointer(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPointer(this);
@@ -1506,30 +1384,30 @@ public partial class CGrammarParser : Parser {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 240;
+			State = 246;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case LeftRound:
 				{
-				State = 233;
+				State = 239;
 				Match(LeftRound);
-				State = 234;
+				State = 240;
 				pointer(0);
-				State = 235;
+				State = 241;
 				Match(RightRound);
 				}
 				break;
 			case Multiply:
 				{
-				State = 237;
+				State = 243;
 				Match(Multiply);
-				State = 238;
+				State = 244;
 				pointer(4);
 				}
 				break;
 			case Identifier:
 				{
-				State = 239;
+				State = 245;
 				Match(Identifier);
 				}
 				break;
@@ -1537,27 +1415,27 @@ public partial class CGrammarParser : Parser {
 				throw new NoViableAltException(this);
 			}
 			Context.Stop = TokenStream.LT(-1);
-			State = 253;
+			State = 259;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,27,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,25,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( ParseListeners!=null )
 						TriggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					State = 251;
+					State = 257;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,26,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,24,Context) ) {
 					case 1:
 						{
 						_localctx = new PointerContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_pointer);
-						State = 242;
+						State = 248;
 						if (!(Precpred(Context, 3))) throw new FailedPredicateException(this, "Precpred(Context, 3)");
-						State = 243;
+						State = 249;
 						Match(Add);
-						State = 244;
+						State = 250;
 						rvalue(0);
 						}
 						break;
@@ -1565,22 +1443,22 @@ public partial class CGrammarParser : Parser {
 						{
 						_localctx = new PointerContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_pointer);
-						State = 245;
+						State = 251;
 						if (!(Precpred(Context, 2))) throw new FailedPredicateException(this, "Precpred(Context, 2)");
-						State = 246;
+						State = 252;
 						Match(Subtract);
-						State = 249;
+						State = 255;
 						ErrorHandler.Sync(this);
-						switch ( Interpreter.AdaptivePredict(TokenStream,25,Context) ) {
+						switch ( Interpreter.AdaptivePredict(TokenStream,23,Context) ) {
 						case 1:
 							{
-							State = 247;
+							State = 253;
 							rvalue(0);
 							}
 							break;
 						case 2:
 							{
-							State = 248;
+							State = 254;
 							pointer(0);
 							}
 							break;
@@ -1590,9 +1468,9 @@ public partial class CGrammarParser : Parser {
 					}
 					} 
 				}
-				State = 255;
+				State = 261;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,27,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,25,Context);
 			}
 			}
 		}
@@ -1630,16 +1508,6 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_type; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterType(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitType(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitType(this);
@@ -1663,62 +1531,62 @@ public partial class CGrammarParser : Parser {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 267;
+			State = 273;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case Struct:
 				{
-				State = 257;
+				State = 263;
 				Match(Struct);
-				State = 258;
+				State = 264;
 				type(9);
 				}
 				break;
 			case Char:
 				{
-				State = 259;
+				State = 265;
 				Match(Char);
 				}
 				break;
 			case Short:
 				{
-				State = 260;
+				State = 266;
 				Match(Short);
 				}
 				break;
 			case Int:
 				{
-				State = 261;
+				State = 267;
 				Match(Int);
 				}
 				break;
 			case Long:
 				{
-				State = 262;
+				State = 268;
 				Match(Long);
 				}
 				break;
 			case Float:
 				{
-				State = 263;
+				State = 269;
 				Match(Float);
 				}
 				break;
 			case Double:
 				{
-				State = 264;
+				State = 270;
 				Match(Double);
 				}
 				break;
 			case Void:
 				{
-				State = 265;
+				State = 271;
 				Match(Void);
 				}
 				break;
 			case Identifier:
 				{
-				State = 266;
+				State = 272;
 				Match(Identifier);
 				}
 				break;
@@ -1726,25 +1594,25 @@ public partial class CGrammarParser : Parser {
 				throw new NoViableAltException(this);
 			}
 			Context.Stop = TokenStream.LT(-1);
-			State = 277;
+			State = 283;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,30,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,28,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					if ( ParseListeners!=null )
 						TriggerExitRuleEvent();
 					_prevctx = _localctx;
 					{
-					State = 275;
+					State = 281;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,29,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,27,Context) ) {
 					case 1:
 						{
 						_localctx = new TypeContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_type);
-						State = 269;
+						State = 275;
 						if (!(Precpred(Context, 11))) throw new FailedPredicateException(this, "Precpred(Context, 11)");
-						State = 270;
+						State = 276;
 						Match(Multiply);
 						}
 						break;
@@ -1752,22 +1620,22 @@ public partial class CGrammarParser : Parser {
 						{
 						_localctx = new TypeContext(_parentctx, _parentState);
 						PushNewRecursionContext(_localctx, _startState, RULE_type);
-						State = 271;
+						State = 277;
 						if (!(Precpred(Context, 10))) throw new FailedPredicateException(this, "Precpred(Context, 10)");
-						State = 272;
+						State = 278;
 						Match(LeftSquare);
-						State = 273;
+						State = 279;
 						Match(IntLiteral);
-						State = 274;
+						State = 280;
 						Match(RightSquare);
 						}
 						break;
 					}
 					} 
 				}
-				State = 279;
+				State = 285;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,30,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,28,Context);
 			}
 			}
 		}
@@ -1795,16 +1663,6 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_assignOperator; } }
 		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.EnterAssignOperator(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			ICGrammarListener typedListener = listener as ICGrammarListener;
-			if (typedListener != null) typedListener.ExitAssignOperator(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitAssignOperator(this);
@@ -1820,9 +1678,9 @@ public partial class CGrammarParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 280;
+			State = 286;
 			_la = TokenStream.LA(1);
-			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 33822867456L) != 0)) ) {
+			if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & 16911433728L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
 			}
 			else {
@@ -1844,29 +1702,29 @@ public partial class CGrammarParser : Parser {
 
 	public override bool Sempred(RuleContext _localctx, int ruleIndex, int predIndex) {
 		switch (ruleIndex) {
-		case 8: return lvalue_sempred((LvalueContext)_localctx, predIndex);
-		case 9: return rvalue_sempred((RvalueContext)_localctx, predIndex);
+		case 8: return rvalue_sempred((RvalueContext)_localctx, predIndex);
+		case 9: return lvalue_sempred((LvalueContext)_localctx, predIndex);
 		case 10: return pointer_sempred((PointerContext)_localctx, predIndex);
 		case 11: return type_sempred((TypeContext)_localctx, predIndex);
 		}
 		return true;
 	}
-	private bool lvalue_sempred(LvalueContext _localctx, int predIndex) {
+	private bool rvalue_sempred(RvalueContext _localctx, int predIndex) {
 		switch (predIndex) {
-		case 0: return Precpred(Context, 6);
-		case 1: return Precpred(Context, 3);
+		case 0: return Precpred(Context, 13);
+		case 1: return Precpred(Context, 12);
+		case 2: return Precpred(Context, 11);
+		case 3: return Precpred(Context, 10);
+		case 4: return Precpred(Context, 9);
+		case 5: return Precpred(Context, 8);
+		case 6: return Precpred(Context, 6);
 		}
 		return true;
 	}
-	private bool rvalue_sempred(RvalueContext _localctx, int predIndex) {
+	private bool lvalue_sempred(LvalueContext _localctx, int predIndex) {
 		switch (predIndex) {
-		case 2: return Precpred(Context, 12);
-		case 3: return Precpred(Context, 11);
-		case 4: return Precpred(Context, 10);
-		case 5: return Precpred(Context, 9);
-		case 6: return Precpred(Context, 8);
-		case 7: return Precpred(Context, 7);
-		case 8: return Precpred(Context, 5);
+		case 7: return Precpred(Context, 6);
+		case 8: return Precpred(Context, 3);
 		}
 		return true;
 	}
@@ -1886,104 +1744,105 @@ public partial class CGrammarParser : Parser {
 	}
 
 	private static int[] _serializedATN = {
-		4,1,58,283,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
+		4,1,57,289,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
 		7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,1,0,1,0,5,0,29,8,0,10,
-		0,12,0,32,9,0,1,0,1,0,1,1,1,1,1,1,1,1,1,2,1,2,1,2,3,2,43,8,2,1,3,1,3,1,
-		3,1,3,1,3,5,3,50,8,3,10,3,12,3,53,9,3,1,3,3,3,56,8,3,1,3,1,3,1,4,1,4,1,
-		4,1,4,1,4,1,4,5,4,66,8,4,10,4,12,4,69,9,4,1,4,1,4,1,4,3,4,74,8,4,1,5,3,
-		5,77,8,5,1,5,1,5,1,5,1,5,1,5,3,5,84,8,5,3,5,86,8,5,1,5,1,5,1,6,1,6,1,6,
-		1,6,1,6,1,6,1,6,1,6,1,6,3,6,99,8,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,
-		1,6,1,6,1,6,3,6,113,8,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,
-		6,1,6,1,6,1,6,1,6,5,6,131,8,6,10,6,12,6,134,9,6,1,6,1,6,1,6,1,6,3,6,140,
-		8,6,1,7,1,7,3,7,144,8,7,3,7,146,8,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,
-		8,1,8,1,8,1,8,1,8,3,8,161,8,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,171,
-		8,8,10,8,12,8,174,9,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,3,9,184,8,9,1,9,
-		1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,
-		9,3,9,205,8,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,
-		1,9,1,9,1,9,1,9,1,9,1,9,1,9,5,9,228,8,9,10,9,12,9,231,9,9,1,10,1,10,1,
-		10,1,10,1,10,1,10,1,10,1,10,3,10,241,8,10,1,10,1,10,1,10,1,10,1,10,1,10,
-		1,10,3,10,250,8,10,5,10,252,8,10,10,10,12,10,255,9,10,1,11,1,11,1,11,1,
-		11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,3,11,268,8,11,1,11,1,11,1,11,1,11,
-		1,11,1,11,5,11,276,8,11,10,11,12,11,279,9,11,1,12,1,12,1,12,0,4,16,18,
-		20,22,13,0,2,4,6,8,10,12,14,16,18,20,22,24,0,8,1,0,22,23,1,0,1,2,2,0,35,
-		36,48,48,1,0,37,39,1,0,35,36,1,0,42,45,1,0,40,41,1,0,29,34,333,0,30,1,
-		0,0,0,2,35,1,0,0,0,4,42,1,0,0,0,6,44,1,0,0,0,8,59,1,0,0,0,10,76,1,0,0,
-		0,12,139,1,0,0,0,14,145,1,0,0,0,16,160,1,0,0,0,18,204,1,0,0,0,20,240,1,
-		0,0,0,22,267,1,0,0,0,24,280,1,0,0,0,26,29,3,2,1,0,27,29,3,4,2,0,28,26,
+		0,12,0,32,9,0,1,0,1,0,1,1,1,1,1,1,1,2,1,2,1,2,3,2,42,8,2,1,3,1,3,1,3,1,
+		3,1,3,5,3,49,8,3,10,3,12,3,52,9,3,1,3,3,3,55,8,3,1,3,1,3,1,4,1,4,1,4,1,
+		4,1,4,1,4,1,4,1,4,1,4,5,4,68,8,4,10,4,12,4,71,9,4,3,4,73,8,4,1,4,1,4,1,
+		4,3,4,78,8,4,1,5,3,5,81,8,5,1,5,1,5,1,5,1,5,1,5,3,5,88,8,5,1,5,1,5,1,6,
+		1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,3,6,101,8,6,1,6,1,6,1,6,1,6,1,6,1,6,1,
+		6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,3,6,123,8,6,1,6,
+		1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,1,6,5,6,141,8,
+		6,10,6,12,6,144,9,6,1,6,1,6,1,6,1,6,3,6,150,8,6,1,7,3,7,153,8,7,1,8,1,
+		8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,
+		1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,3,8,183,8,8,1,8,1,8,1,8,1,8,1,8,1,
+		8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,206,
+		8,8,10,8,12,8,209,9,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,
+		1,9,3,9,224,8,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,5,9,234,8,9,10,9,12,9,
+		237,9,9,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,3,10,247,8,10,1,10,1,10,
+		1,10,1,10,1,10,1,10,1,10,3,10,256,8,10,5,10,258,8,10,10,10,12,10,261,9,
+		10,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,3,11,274,8,11,
+		1,11,1,11,1,11,1,11,1,11,1,11,5,11,282,8,11,10,11,12,11,285,9,11,1,12,
+		1,12,1,12,0,4,16,18,20,22,13,0,2,4,6,8,10,12,14,16,18,20,22,24,0,6,2,0,
+		34,35,47,47,1,0,36,38,1,0,34,35,1,0,41,44,1,0,39,40,1,0,28,33,339,0,30,
+		1,0,0,0,2,35,1,0,0,0,4,41,1,0,0,0,6,43,1,0,0,0,8,58,1,0,0,0,10,80,1,0,
+		0,0,12,149,1,0,0,0,14,152,1,0,0,0,16,182,1,0,0,0,18,223,1,0,0,0,20,246,
+		1,0,0,0,22,273,1,0,0,0,24,286,1,0,0,0,26,29,3,2,1,0,27,29,3,4,2,0,28,26,
 		1,0,0,0,28,27,1,0,0,0,29,32,1,0,0,0,30,28,1,0,0,0,30,31,1,0,0,0,31,33,
-		1,0,0,0,32,30,1,0,0,0,33,34,5,0,0,1,34,1,1,0,0,0,35,36,5,3,0,0,36,37,7,
-		0,0,0,37,38,7,1,0,0,38,3,1,0,0,0,39,43,3,8,4,0,40,43,3,6,3,0,41,43,3,10,
-		5,0,42,39,1,0,0,0,42,40,1,0,0,0,42,41,1,0,0,0,43,5,1,0,0,0,44,45,5,12,
-		0,0,45,55,5,20,0,0,46,51,5,53,0,0,47,50,3,10,5,0,48,50,3,6,3,0,49,47,1,
-		0,0,0,49,48,1,0,0,0,50,53,1,0,0,0,51,49,1,0,0,0,51,52,1,0,0,0,52,54,1,
-		0,0,0,53,51,1,0,0,0,54,56,5,54,0,0,55,46,1,0,0,0,55,56,1,0,0,0,56,57,1,
-		0,0,0,57,58,5,55,0,0,58,7,1,0,0,0,59,60,3,22,11,0,60,61,5,20,0,0,61,67,
-		5,49,0,0,62,63,3,22,11,0,63,64,5,20,0,0,64,66,1,0,0,0,65,62,1,0,0,0,66,
-		69,1,0,0,0,67,65,1,0,0,0,67,68,1,0,0,0,68,70,1,0,0,0,69,67,1,0,0,0,70,
-		73,5,50,0,0,71,74,3,12,6,0,72,74,5,55,0,0,73,71,1,0,0,0,73,72,1,0,0,0,
-		74,9,1,0,0,0,75,77,5,11,0,0,76,75,1,0,0,0,76,77,1,0,0,0,77,78,1,0,0,0,
-		78,79,3,22,11,0,79,85,5,20,0,0,80,83,3,24,12,0,81,84,3,16,8,0,82,84,3,
-		18,9,0,83,81,1,0,0,0,83,82,1,0,0,0,84,86,1,0,0,0,85,80,1,0,0,0,85,86,1,
-		0,0,0,86,87,1,0,0,0,87,88,5,55,0,0,88,11,1,0,0,0,89,140,3,6,3,0,90,140,
-		3,10,5,0,91,92,5,4,0,0,92,93,5,49,0,0,93,94,3,14,7,0,94,95,5,50,0,0,95,
-		98,3,12,6,0,96,97,5,5,0,0,97,99,3,12,6,0,98,96,1,0,0,0,98,99,1,0,0,0,99,
-		140,1,0,0,0,100,101,5,7,0,0,101,102,5,49,0,0,102,103,3,14,7,0,103,104,
-		5,50,0,0,104,105,3,12,6,0,105,140,1,0,0,0,106,107,5,6,0,0,107,112,5,49,
-		0,0,108,109,3,14,7,0,109,110,5,55,0,0,110,113,1,0,0,0,111,113,3,10,5,0,
-		112,108,1,0,0,0,112,111,1,0,0,0,113,114,1,0,0,0,114,115,3,14,7,0,115,116,
-		5,55,0,0,116,117,3,14,7,0,117,118,5,50,0,0,118,119,3,12,6,0,119,140,1,
-		0,0,0,120,121,5,9,0,0,121,140,5,55,0,0,122,123,5,8,0,0,123,140,5,55,0,
-		0,124,125,5,10,0,0,125,126,3,14,7,0,126,127,5,55,0,0,127,140,1,0,0,0,128,
-		132,5,53,0,0,129,131,3,12,6,0,130,129,1,0,0,0,131,134,1,0,0,0,132,130,
-		1,0,0,0,132,133,1,0,0,0,133,135,1,0,0,0,134,132,1,0,0,0,135,140,5,54,0,
-		0,136,137,3,14,7,0,137,138,5,55,0,0,138,140,1,0,0,0,139,89,1,0,0,0,139,
-		90,1,0,0,0,139,91,1,0,0,0,139,100,1,0,0,0,139,106,1,0,0,0,139,120,1,0,
-		0,0,139,122,1,0,0,0,139,124,1,0,0,0,139,128,1,0,0,0,139,136,1,0,0,0,140,
-		13,1,0,0,0,141,146,3,16,8,0,142,144,3,18,9,0,143,142,1,0,0,0,143,144,1,
-		0,0,0,144,146,1,0,0,0,145,141,1,0,0,0,145,143,1,0,0,0,146,15,1,0,0,0,147,
-		148,6,8,-1,0,148,149,5,49,0,0,149,150,3,16,8,0,150,151,5,50,0,0,151,161,
-		1,0,0,0,152,153,5,37,0,0,153,161,3,20,10,0,154,155,3,20,10,0,155,156,5,
-		27,0,0,156,157,5,20,0,0,157,161,1,0,0,0,158,161,5,22,0,0,159,161,5,20,
-		0,0,160,147,1,0,0,0,160,152,1,0,0,0,160,154,1,0,0,0,160,158,1,0,0,0,160,
-		159,1,0,0,0,161,172,1,0,0,0,162,163,10,6,0,0,163,164,5,26,0,0,164,171,
-		5,20,0,0,165,166,10,3,0,0,166,167,5,51,0,0,167,168,3,18,9,0,168,169,5,
-		52,0,0,169,171,1,0,0,0,170,162,1,0,0,0,170,165,1,0,0,0,171,174,1,0,0,0,
-		172,170,1,0,0,0,172,173,1,0,0,0,173,17,1,0,0,0,174,172,1,0,0,0,175,176,
-		6,9,-1,0,176,177,5,49,0,0,177,178,3,18,9,0,178,179,5,50,0,0,179,205,1,
-		0,0,0,180,181,3,16,8,0,181,183,5,49,0,0,182,184,3,18,9,0,183,182,1,0,0,
-		0,183,184,1,0,0,0,184,185,1,0,0,0,185,186,5,50,0,0,186,205,1,0,0,0,187,
-		188,5,28,0,0,188,205,3,16,8,0,189,190,7,2,0,0,190,205,3,18,9,14,191,192,
-		5,49,0,0,192,193,3,22,11,0,193,194,5,50,0,0,194,195,3,18,9,13,195,205,
-		1,0,0,0,196,197,3,16,8,0,197,198,3,24,12,0,198,199,3,18,9,6,199,205,1,
-		0,0,0,200,205,5,24,0,0,201,205,5,25,0,0,202,205,5,21,0,0,203,205,5,20,
-		0,0,204,175,1,0,0,0,204,180,1,0,0,0,204,187,1,0,0,0,204,189,1,0,0,0,204,
-		191,1,0,0,0,204,196,1,0,0,0,204,200,1,0,0,0,204,201,1,0,0,0,204,202,1,
-		0,0,0,204,203,1,0,0,0,205,229,1,0,0,0,206,207,10,12,0,0,207,208,7,3,0,
-		0,208,228,3,18,9,13,209,210,10,11,0,0,210,211,7,4,0,0,211,228,3,18,9,12,
-		212,213,10,10,0,0,213,214,7,5,0,0,214,228,3,18,9,11,215,216,10,9,0,0,216,
-		217,7,6,0,0,217,228,3,18,9,10,218,219,10,8,0,0,219,220,5,46,0,0,220,228,
-		3,18,9,9,221,222,10,7,0,0,222,223,5,47,0,0,223,228,3,18,9,8,224,225,10,
-		5,0,0,225,226,5,57,0,0,226,228,3,18,9,6,227,206,1,0,0,0,227,209,1,0,0,
-		0,227,212,1,0,0,0,227,215,1,0,0,0,227,218,1,0,0,0,227,221,1,0,0,0,227,
-		224,1,0,0,0,228,231,1,0,0,0,229,227,1,0,0,0,229,230,1,0,0,0,230,19,1,0,
-		0,0,231,229,1,0,0,0,232,233,6,10,-1,0,233,234,5,49,0,0,234,235,3,20,10,
-		0,235,236,5,50,0,0,236,241,1,0,0,0,237,238,5,37,0,0,238,241,3,20,10,4,
-		239,241,5,20,0,0,240,232,1,0,0,0,240,237,1,0,0,0,240,239,1,0,0,0,241,253,
-		1,0,0,0,242,243,10,3,0,0,243,244,5,35,0,0,244,252,3,18,9,0,245,246,10,
-		2,0,0,246,249,5,36,0,0,247,250,3,18,9,0,248,250,3,20,10,0,249,247,1,0,
-		0,0,249,248,1,0,0,0,250,252,1,0,0,0,251,242,1,0,0,0,251,245,1,0,0,0,252,
-		255,1,0,0,0,253,251,1,0,0,0,253,254,1,0,0,0,254,21,1,0,0,0,255,253,1,0,
-		0,0,256,257,6,11,-1,0,257,258,5,12,0,0,258,268,3,22,11,9,259,268,5,13,
-		0,0,260,268,5,14,0,0,261,268,5,15,0,0,262,268,5,16,0,0,263,268,5,17,0,
-		0,264,268,5,18,0,0,265,268,5,19,0,0,266,268,5,20,0,0,267,256,1,0,0,0,267,
-		259,1,0,0,0,267,260,1,0,0,0,267,261,1,0,0,0,267,262,1,0,0,0,267,263,1,
-		0,0,0,267,264,1,0,0,0,267,265,1,0,0,0,267,266,1,0,0,0,268,277,1,0,0,0,
-		269,270,10,11,0,0,270,276,5,37,0,0,271,272,10,10,0,0,272,273,5,51,0,0,
-		273,274,5,24,0,0,274,276,5,52,0,0,275,269,1,0,0,0,275,271,1,0,0,0,276,
-		279,1,0,0,0,277,275,1,0,0,0,277,278,1,0,0,0,278,23,1,0,0,0,279,277,1,0,
-		0,0,280,281,7,7,0,0,281,25,1,0,0,0,31,28,30,42,49,51,55,67,73,76,83,85,
-		98,112,132,139,143,145,160,170,172,183,204,227,229,240,249,251,253,267,
-		275,277
+		1,0,0,0,32,30,1,0,0,0,33,34,5,0,0,1,34,1,1,0,0,0,35,36,5,1,0,0,36,37,5,
+		19,0,0,37,3,1,0,0,0,38,42,3,8,4,0,39,42,3,6,3,0,40,42,3,10,5,0,41,38,1,
+		0,0,0,41,39,1,0,0,0,41,40,1,0,0,0,42,5,1,0,0,0,43,44,5,11,0,0,44,54,5,
+		20,0,0,45,50,5,52,0,0,46,49,3,10,5,0,47,49,3,6,3,0,48,46,1,0,0,0,48,47,
+		1,0,0,0,49,52,1,0,0,0,50,48,1,0,0,0,50,51,1,0,0,0,51,53,1,0,0,0,52,50,
+		1,0,0,0,53,55,5,53,0,0,54,45,1,0,0,0,54,55,1,0,0,0,55,56,1,0,0,0,56,57,
+		5,54,0,0,57,7,1,0,0,0,58,59,3,22,11,0,59,60,5,20,0,0,60,72,5,48,0,0,61,
+		62,3,22,11,0,62,69,5,20,0,0,63,64,5,56,0,0,64,65,3,22,11,0,65,66,5,20,
+		0,0,66,68,1,0,0,0,67,63,1,0,0,0,68,71,1,0,0,0,69,67,1,0,0,0,69,70,1,0,
+		0,0,70,73,1,0,0,0,71,69,1,0,0,0,72,61,1,0,0,0,72,73,1,0,0,0,73,74,1,0,
+		0,0,74,77,5,49,0,0,75,78,3,12,6,0,76,78,5,54,0,0,77,75,1,0,0,0,77,76,1,
+		0,0,0,78,9,1,0,0,0,79,81,5,10,0,0,80,79,1,0,0,0,80,81,1,0,0,0,81,82,1,
+		0,0,0,82,83,3,22,11,0,83,87,5,20,0,0,84,85,3,24,12,0,85,86,3,14,7,0,86,
+		88,1,0,0,0,87,84,1,0,0,0,87,88,1,0,0,0,88,89,1,0,0,0,89,90,5,54,0,0,90,
+		11,1,0,0,0,91,150,3,6,3,0,92,150,3,10,5,0,93,94,5,2,0,0,94,95,5,48,0,0,
+		95,96,3,14,7,0,96,97,5,49,0,0,97,100,3,12,6,0,98,99,5,3,0,0,99,101,3,12,
+		6,0,100,98,1,0,0,0,100,101,1,0,0,0,101,150,1,0,0,0,102,103,5,5,0,0,103,
+		104,5,48,0,0,104,105,3,14,7,0,105,106,5,49,0,0,106,107,3,12,6,0,107,150,
+		1,0,0,0,108,109,5,6,0,0,109,110,3,12,6,0,110,111,5,5,0,0,111,112,5,48,
+		0,0,112,113,3,14,7,0,113,114,5,49,0,0,114,115,5,54,0,0,115,150,1,0,0,0,
+		116,117,5,4,0,0,117,122,5,48,0,0,118,119,3,14,7,0,119,120,5,54,0,0,120,
+		123,1,0,0,0,121,123,3,10,5,0,122,118,1,0,0,0,122,121,1,0,0,0,123,124,1,
+		0,0,0,124,125,3,14,7,0,125,126,5,54,0,0,126,127,3,14,7,0,127,128,5,49,
+		0,0,128,129,3,12,6,0,129,150,1,0,0,0,130,131,5,8,0,0,131,150,5,54,0,0,
+		132,133,5,7,0,0,133,150,5,54,0,0,134,135,5,9,0,0,135,136,3,14,7,0,136,
+		137,5,54,0,0,137,150,1,0,0,0,138,142,5,52,0,0,139,141,3,12,6,0,140,139,
+		1,0,0,0,141,144,1,0,0,0,142,140,1,0,0,0,142,143,1,0,0,0,143,145,1,0,0,
+		0,144,142,1,0,0,0,145,150,5,53,0,0,146,147,3,14,7,0,147,148,5,54,0,0,148,
+		150,1,0,0,0,149,91,1,0,0,0,149,92,1,0,0,0,149,93,1,0,0,0,149,102,1,0,0,
+		0,149,108,1,0,0,0,149,116,1,0,0,0,149,130,1,0,0,0,149,132,1,0,0,0,149,
+		134,1,0,0,0,149,138,1,0,0,0,149,146,1,0,0,0,150,13,1,0,0,0,151,153,3,16,
+		8,0,152,151,1,0,0,0,152,153,1,0,0,0,153,15,1,0,0,0,154,155,6,8,-1,0,155,
+		156,5,48,0,0,156,157,3,16,8,0,157,158,5,49,0,0,158,183,1,0,0,0,159,160,
+		3,18,9,0,160,161,5,48,0,0,161,162,3,14,7,0,162,163,5,49,0,0,163,183,1,
+		0,0,0,164,165,5,27,0,0,165,183,3,18,9,0,166,167,7,0,0,0,167,183,3,16,8,
+		15,168,169,5,48,0,0,169,170,3,22,11,0,170,171,5,49,0,0,171,172,3,16,8,
+		14,172,183,1,0,0,0,173,174,3,18,9,0,174,175,3,24,12,0,175,176,3,16,8,7,
+		176,183,1,0,0,0,177,183,3,18,9,0,178,183,5,23,0,0,179,183,5,24,0,0,180,
+		183,5,21,0,0,181,183,5,20,0,0,182,154,1,0,0,0,182,159,1,0,0,0,182,164,
+		1,0,0,0,182,166,1,0,0,0,182,168,1,0,0,0,182,173,1,0,0,0,182,177,1,0,0,
+		0,182,178,1,0,0,0,182,179,1,0,0,0,182,180,1,0,0,0,182,181,1,0,0,0,183,
+		207,1,0,0,0,184,185,10,13,0,0,185,186,7,1,0,0,186,206,3,16,8,14,187,188,
+		10,12,0,0,188,189,7,2,0,0,189,206,3,16,8,13,190,191,10,11,0,0,191,192,
+		7,3,0,0,192,206,3,16,8,12,193,194,10,10,0,0,194,195,7,4,0,0,195,206,3,
+		16,8,11,196,197,10,9,0,0,197,198,5,45,0,0,198,206,3,16,8,10,199,200,10,
+		8,0,0,200,201,5,46,0,0,201,206,3,16,8,9,202,203,10,6,0,0,203,204,5,56,
+		0,0,204,206,3,16,8,7,205,184,1,0,0,0,205,187,1,0,0,0,205,190,1,0,0,0,205,
+		193,1,0,0,0,205,196,1,0,0,0,205,199,1,0,0,0,205,202,1,0,0,0,206,209,1,
+		0,0,0,207,205,1,0,0,0,207,208,1,0,0,0,208,17,1,0,0,0,209,207,1,0,0,0,210,
+		211,6,9,-1,0,211,212,5,48,0,0,212,213,3,18,9,0,213,214,5,49,0,0,214,224,
+		1,0,0,0,215,216,5,36,0,0,216,224,3,20,10,0,217,218,3,20,10,0,218,219,5,
+		26,0,0,219,220,5,20,0,0,220,224,1,0,0,0,221,224,5,22,0,0,222,224,5,20,
+		0,0,223,210,1,0,0,0,223,215,1,0,0,0,223,217,1,0,0,0,223,221,1,0,0,0,223,
+		222,1,0,0,0,224,235,1,0,0,0,225,226,10,6,0,0,226,227,5,25,0,0,227,234,
+		5,20,0,0,228,229,10,3,0,0,229,230,5,50,0,0,230,231,3,16,8,0,231,232,5,
+		51,0,0,232,234,1,0,0,0,233,225,1,0,0,0,233,228,1,0,0,0,234,237,1,0,0,0,
+		235,233,1,0,0,0,235,236,1,0,0,0,236,19,1,0,0,0,237,235,1,0,0,0,238,239,
+		6,10,-1,0,239,240,5,48,0,0,240,241,3,20,10,0,241,242,5,49,0,0,242,247,
+		1,0,0,0,243,244,5,36,0,0,244,247,3,20,10,4,245,247,5,20,0,0,246,238,1,
+		0,0,0,246,243,1,0,0,0,246,245,1,0,0,0,247,259,1,0,0,0,248,249,10,3,0,0,
+		249,250,5,34,0,0,250,258,3,16,8,0,251,252,10,2,0,0,252,255,5,35,0,0,253,
+		256,3,16,8,0,254,256,3,20,10,0,255,253,1,0,0,0,255,254,1,0,0,0,256,258,
+		1,0,0,0,257,248,1,0,0,0,257,251,1,0,0,0,258,261,1,0,0,0,259,257,1,0,0,
+		0,259,260,1,0,0,0,260,21,1,0,0,0,261,259,1,0,0,0,262,263,6,11,-1,0,263,
+		264,5,11,0,0,264,274,3,22,11,9,265,274,5,12,0,0,266,274,5,13,0,0,267,274,
+		5,14,0,0,268,274,5,15,0,0,269,274,5,16,0,0,270,274,5,17,0,0,271,274,5,
+		18,0,0,272,274,5,20,0,0,273,262,1,0,0,0,273,265,1,0,0,0,273,266,1,0,0,
+		0,273,267,1,0,0,0,273,268,1,0,0,0,273,269,1,0,0,0,273,270,1,0,0,0,273,
+		271,1,0,0,0,273,272,1,0,0,0,274,283,1,0,0,0,275,276,10,11,0,0,276,282,
+		5,36,0,0,277,278,10,10,0,0,278,279,5,50,0,0,279,280,5,23,0,0,280,282,5,
+		51,0,0,281,275,1,0,0,0,281,277,1,0,0,0,282,285,1,0,0,0,283,281,1,0,0,0,
+		283,284,1,0,0,0,284,23,1,0,0,0,285,283,1,0,0,0,286,287,7,5,0,0,287,25,
+		1,0,0,0,29,28,30,41,48,50,54,69,72,77,80,87,100,122,142,149,152,182,205,
+		207,223,233,235,246,255,257,259,273,281,283
 	};
 
 	public static readonly ATN _ATN =

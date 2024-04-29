@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from c://Users//Mateusz//Documents//studia//kompilatory//Konwerter-C--Python//CGrammar.g4 by ANTLR 4.13.1
+// Generated from /home/pawel/Desktop/university/compilers/Konwerter-C--Python/CGrammar.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -80,17 +80,17 @@ public interface ICGrammarVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitExpression([NotNull] CGrammarParser.ExpressionContext context);
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="CGrammarParser.lvalue"/>.
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	/// <return>The visitor result.</return>
-	Result VisitLvalue([NotNull] CGrammarParser.LvalueContext context);
-	/// <summary>
 	/// Visit a parse tree produced by <see cref="CGrammarParser.rvalue"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitRvalue([NotNull] CGrammarParser.RvalueContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="CGrammarParser.lvalue"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLvalue([NotNull] CGrammarParser.LvalueContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="CGrammarParser.pointer"/>.
 	/// </summary>
