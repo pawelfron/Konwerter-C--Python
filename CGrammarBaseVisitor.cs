@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /home/pawel/Desktop/university/compilers/Konwerter-C--Python/CGrammar.g4 by ANTLR 4.13.1
+// Generated from c://Users//Mateusz//Documents//studia//kompilatory//Konwerter-C--Python//CGrammar.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162

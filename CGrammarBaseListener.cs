@@ -132,18 +132,6 @@ public partial class CGrammarBaseListener : ICGrammarListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitExpression([NotNull] CGrammarParser.ExpressionContext context) { }
 	/// <summary>
-	/// Enter a parse tree produced by <see cref="CGrammarParser.lvalue"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void EnterLvalue([NotNull] CGrammarParser.LvalueContext context) { }
-	/// <summary>
-	/// Exit a parse tree produced by <see cref="CGrammarParser.lvalue"/>.
-	/// <para>The default implementation does nothing.</para>
-	/// </summary>
-	/// <param name="context">The parse tree.</param>
-	public virtual void ExitLvalue([NotNull] CGrammarParser.LvalueContext context) { }
-	/// <summary>
 	/// Enter a parse tree produced by <see cref="CGrammarParser.rvalue"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -155,6 +143,18 @@ public partial class CGrammarBaseListener : ICGrammarListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitRvalue([NotNull] CGrammarParser.RvalueContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="CGrammarParser.lvalue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLvalue([NotNull] CGrammarParser.LvalueContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="CGrammarParser.lvalue"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLvalue([NotNull] CGrammarParser.LvalueContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="CGrammarParser.pointer"/>.
 	/// <para>The default implementation does nothing.</para>

@@ -36,14 +36,14 @@ statement
     : structDeclaration
     | variableDeclaration
     | If LeftRound expression RightRound statement
-        (Else statement)?
+        (Else statement)? // else structDeclaration ? + no else if
     | While LeftRound expression RightRound statement
     | Do statement
         While LeftRound expression RightRound
         Semicolon
     | For LeftRound
         (expression Semicolon | variableDeclaration)
-        expression Semicolon
+        expression Semicolon // should be condition, possible IntLiteral
         expression RightRound
         statement
     | Break Semicolon
@@ -54,7 +54,7 @@ statement
     ;
 
 expression
-    : rvalue?
+    : rvalue? // empty expression ?
     ;
 
 rvalue
@@ -71,7 +71,7 @@ rvalue
     | rvalue Or rvalue
     | lvalue assignOperator rvalue
     | rvalue Comma rvalue
-    | lvalue
+    | lvalue // lvalue on the right side ?
     | IntLiteral
     | FloatLiteral
     | CharLiteral
@@ -91,7 +91,7 @@ lvalue
 pointer
     : LeftRound pointer RightRound
     | Multiply pointer
-    | pointer Add rvalue
+    | pointer Add rvalue // possible Identifier Add rvalue as lvalue
     | pointer Subtract (rvalue | pointer)
     | Identifier
     ;

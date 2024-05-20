@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from /home/pawel/Desktop/university/compilers/Konwerter-C--Python/CGrammar.g4 by ANTLR 4.13.1
+// Generated from c://Users//Mateusz//Documents//studia//kompilatory//Konwerter-C--Python//CGrammar.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -128,6 +128,16 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_program; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterProgram(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitProgram(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitProgram(this);
@@ -204,6 +214,16 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_includeStatement; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterIncludeStatement(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitIncludeStatement(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIncludeStatement(this);
@@ -250,6 +270,16 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_declaration; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterDeclaration(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitDeclaration(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -323,6 +353,16 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_structDeclaration; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterStructDeclaration(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitStructDeclaration(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -422,6 +462,16 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_functionDeclaration; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterFunctionDeclaration(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitFunctionDeclaration(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -524,6 +574,16 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_variableDeclaration; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterVariableDeclaration(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitVariableDeclaration(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitVariableDeclaration(this);
@@ -620,6 +680,16 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_statement; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterStatement(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitStatement(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -833,6 +903,16 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_expression; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterExpression(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitExpression(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitExpression(this);
@@ -917,6 +997,16 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_rvalue; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterRvalue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitRvalue(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -1213,6 +1303,16 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_lvalue; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterLvalue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitLvalue(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitLvalue(this);
@@ -1361,6 +1461,16 @@ public partial class CGrammarParser : Parser {
 		}
 		public override int RuleIndex { get { return RULE_pointer; } }
 		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterPointer(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitPointer(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitPointer(this);
@@ -1507,6 +1617,16 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_type; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterType(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitType(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;
@@ -1662,6 +1782,16 @@ public partial class CGrammarParser : Parser {
 		{
 		}
 		public override int RuleIndex { get { return RULE_assignOperator; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.EnterAssignOperator(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			ICGrammarListener typedListener = listener as ICGrammarListener;
+			if (typedListener != null) typedListener.ExitAssignOperator(this);
+		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
 			ICGrammarVisitor<TResult> typedVisitor = visitor as ICGrammarVisitor<TResult>;

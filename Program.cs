@@ -9,7 +9,11 @@ public class Program {
         ITokenStream tokens = new CommonTokenStream(lexer);
         CGrammarParser parser = new CGrammarParser(tokens);
         IParseTree tree = parser.program();
-        print(tree.ToStringTree(parser));
+        PythonGenerator visitor = new PythonGenerator();
+        string pythonCode = visitor.Visit(tree);
+        print(pythonCode);
+
+
     }
 
     public static void print(string str) {
