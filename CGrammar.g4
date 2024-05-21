@@ -36,7 +36,7 @@ statement
     : structDeclaration
     | variableDeclaration
     | If LeftRound expression RightRound statement
-        (Else statement)? // else structDeclaration ? + no else if
+        (Else statement)?
     | While LeftRound expression RightRound statement
     | Do statement
         While LeftRound expression RightRound
@@ -71,7 +71,7 @@ rvalue
     | rvalue Or rvalue
     | lvalue assignOperator rvalue
     | rvalue Comma rvalue
-    | lvalue // lvalue on the right side ?
+    | lvalue
     | IntLiteral
     | FloatLiteral
     | CharLiteral
