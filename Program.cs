@@ -3,7 +3,7 @@ using Antlr4.Runtime.Tree;
 
 public class Program {
     public static void Main(string[] args) {
-        string input = File.ReadAllText("c.c");
+        string input = File.ReadAllText(@"C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\c.c");
         ICharStream stream = CharStreams.fromString(input);
         ITokenSource lexer = new CGrammarLexer(stream);
         ITokenStream tokens = new CommonTokenStream(lexer);
@@ -12,6 +12,7 @@ public class Program {
         PythonGenerator visitor = new PythonGenerator();
         string pythonCode = visitor.Visit(tree);
         print(pythonCode);
+        File.WriteAllText(@"C:\Users\Mateusz\Documents\studia\kompilatory\Konwerter-C--Python\output.py", pythonCode);
 
 
     }

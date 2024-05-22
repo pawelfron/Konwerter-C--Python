@@ -487,7 +487,6 @@ public partial class CGrammarParser : Parser {
 				Match(RightCurly);
 				}
 			}
-
 			State = 73;
 			Match(Semicolon);
 			}

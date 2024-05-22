@@ -17,7 +17,7 @@ declaration
 functionDeclaration
     : type Identifier 
         LeftRound (type Identifier (Comma type Identifier)*)? RightRound
-        (statement | Semicolon)
+        (Semicolon | statement)
     ;
 
 structDeclaration
