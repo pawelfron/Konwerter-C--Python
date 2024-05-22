@@ -14,16 +14,16 @@ declaration
     | variableDeclaration
     ;
 
-structDeclaration
-    : Struct Identifier
-        (LeftCurly (variableDeclaration | structDeclaration)* RightCurly)?
-        Semicolon
-    ;
-
 functionDeclaration
     : type Identifier 
         LeftRound (type Identifier (Comma type Identifier)*)? RightRound
         (statement | Semicolon)
+    ;
+
+structDeclaration
+    : Struct Identifier
+        (LeftCurly (variableDeclaration | structDeclaration)* RightCurly)?
+        Semicolon
     ;
 
 variableDeclaration
@@ -33,73 +33,78 @@ variableDeclaration
     ;
 
 statement
-    : structDeclaration
-    | variableDeclaration
+    : LeftCurly 
+        (variableDeclaration | structDeclaration | statement)*
+        RightCurly
     | If LeftRound expression RightRound statement
-        (Else statement)? // else structDeclaration ? + no else if
+        (Else statement)?
     | While LeftRound expression RightRound statement
     | Do statement
         While LeftRound expression RightRound
         Semicolon
     | For LeftRound
-        (expression Semicolon | variableDeclaration)
-        expression Semicolon // should be condition, possible IntLiteral
-        expression RightRound
+        (expression? Semicolon | variableDeclaration)
+        expression? Semicolon
+        expression? RightRound
         statement
     | Break Semicolon
     | Continue Semicolon
-    | Return expression Semicolon
-    | LeftCurly statement* RightCurly
-    | expression Semicolon
+    | Return expression? Semicolon
+    | expression? Semicolon
     ;
 
 expression
-    : rvalue? // empty expression ?
-    ;
-
-rvalue
-    : LeftRound rvalue RightRound
-    | lvalue LeftRound expression RightRound
+    : LeftRound expression RightRound
+    | lvalue LeftRound expression? RightRound
     | Address lvalue
-    | (Add | Subtract | Not ) rvalue
-    | LeftRound type RightRound rvalue
-    | rvalue (Multiply | Divide | Modulo) rvalue
-    | rvalue (Add | Subtract) rvalue
-    | rvalue (Less | LessOrEqual | Greater | GreaterOrEqual) rvalue
-    | rvalue (Equal | NotEqual) rvalue
-    | rvalue And rvalue
-    | rvalue Or rvalue
-    | lvalue assignOperator rvalue
-    | rvalue Comma rvalue
-    | lvalue // lvalue on the right side ?
+    | (Add | Subtract | Not ) expression
+    | LeftRound type RightRound expression
+    | expression (Multiply | Divide | Modulo) expression
+    | expression (Add | Subtract) expression
+    | expression (Less | LessOrEqual | Greater | GreaterOrEqual) expression
+    | expression (Equal | NotEqual) expression
+    | expression And expression
+    | expression Or expression
+    | lvalue assignOperator expression
+    | expression Comma expression
+    | CharLiteral
+    | StringLiteral
     | IntLiteral
     | FloatLiteral
-    | CharLiteral
-    | Identifier
+    | lvalue
     ;
+
+// Old version
+// lvalue
+//     : LeftRound lvalue RightRound
+//     | lvalue Access Identifier
+//     | Multiply pointer
+//     | pointer AccessPointer Identifier
+//     | lvalue LeftSquare expression RightSquare
+//     | Identifier
+//     ;
+
+// pointer
+//     : LeftRound pointer RightRound
+//     | Multiply pointer
+//     | pointer Add expression // possible Identifier Add rvalue as lvalue
+//     | pointer Subtract (expression | pointer)
+//     | Identifier
+//     ;
 
 lvalue
     : LeftRound lvalue RightRound
-    | lvalue Access Identifier
-    | Multiply pointer
-    | pointer AccessPointer Identifier
-    | lvalue LeftSquare rvalue RightSquare
-    | StringLiteral
-    | Identifier
-    ;
-
-pointer
-    : LeftRound pointer RightRound
-    | Multiply pointer
-    | pointer Add rvalue // possible Identifier Add rvalue as lvalue
-    | pointer Subtract (rvalue | pointer)
+    | lvalue (Access | AccessPointer) Identifier
+    | lvalue LeftSquare expression RightSquare
+    | Multiply lvalue
+    | lvalue (Add | Subtract) expression
     | Identifier
     ;
 
 type
     : type Multiply
     | type LeftSquare IntLiteral RightSquare
-    | Struct type
+    | Struct Identifier
     | Char
     | Short
     | Int

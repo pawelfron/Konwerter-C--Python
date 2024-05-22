@@ -24,16 +24,16 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
         return Visit(context.GetChild(0));
     }
 
-    public override string VisitRvalue([NotNull] CGrammarParser.RvalueContext context) {
-        string result = "";
-        for(int i=0; i<context.ChildCount; i++) {
-            if(context.GetChild(i) is TerminalNodeImpl) {
-            result += context.GetChild(i).GetText();
-            }
-            else {
-                result += Visit(context.GetChild(i));
-            }
-        }
-        return result;
-    }
+    // public override string VisitRvalue([NotNull] CGrammarParser.RvalueContext context) {
+    //     string result = "";
+    //     for(int i=0; i<context.ChildCount; i++) {
+    //         if(context.GetChild(i) is TerminalNodeImpl) {
+    //         result += context.GetChild(i).GetText();
+    //         }
+    //         else {
+    //             result += Visit(context.GetChild(i));
+    //         }
+    //     }
+    //     return result;
+    // }
 }
