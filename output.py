@@ -1,7 +1,4 @@
-def main(
-
-)
-:
+def main():
     if 3!=4:
         a=None
     else:
@@ -13,6 +10,4 @@ def main(
 
 
 
-main(
-
-)
+main()

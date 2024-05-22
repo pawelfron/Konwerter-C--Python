@@ -449,10 +449,10 @@ public partial class CGrammarParser : Parser {
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LeftRound() { return GetToken(CGrammarParser.LeftRound, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RightRound() { return GetToken(CGrammarParser.RightRound, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Semicolon() { return GetToken(CGrammarParser.Semicolon, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public StatementContext statement() {
 			return GetRuleContext<StatementContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Semicolon() { return GetToken(CGrammarParser.Semicolon, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Comma() { return GetTokens(CGrammarParser.Comma); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Comma(int i) {
 			return GetToken(CGrammarParser.Comma, i);
@@ -532,13 +532,13 @@ public partial class CGrammarParser : Parser {
 			case 1:
 				{
 				State = 75;
-				statement();
+				Match(Semicolon);
 				}
 				break;
 			case 2:
 				{
 				State = 76;
-				Match(Semicolon);
+				statement();
 				}
 				break;
 			}
@@ -1909,7 +1909,7 @@ public partial class CGrammarParser : Parser {
 		62,3,22,11,0,62,69,5,20,0,0,63,64,5,56,0,0,64,65,3,22,11,0,65,66,5,20,
 		0,0,66,68,1,0,0,0,67,63,1,0,0,0,68,71,1,0,0,0,69,67,1,0,0,0,69,70,1,0,
 		0,0,70,73,1,0,0,0,71,69,1,0,0,0,72,61,1,0,0,0,72,73,1,0,0,0,73,74,1,0,
-		0,0,74,77,5,49,0,0,75,78,3,12,6,0,76,78,5,54,0,0,77,75,1,0,0,0,77,76,1,
+		0,0,74,77,5,49,0,0,75,78,5,54,0,0,76,78,3,12,6,0,77,75,1,0,0,0,77,76,1,
 		0,0,0,78,9,1,0,0,0,79,81,5,10,0,0,80,79,1,0,0,0,80,81,1,0,0,0,81,82,1,
 		0,0,0,82,83,3,22,11,0,83,87,5,20,0,0,84,85,3,24,12,0,85,86,3,14,7,0,86,
 		88,1,0,0,0,87,84,1,0,0,0,87,88,1,0,0,0,88,89,1,0,0,0,89,90,5,54,0,0,90,
