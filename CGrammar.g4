@@ -33,8 +33,9 @@ variableDeclaration
     ;
 
 statement
-    : structDeclaration
-    | variableDeclaration
+    : LeftCurly 
+        (variableDeclaration | structDeclaration | statement)*
+        RightCurly
     | If LeftRound expression RightRound statement
         (Else statement)?
     | While LeftRound expression RightRound statement
@@ -49,7 +50,6 @@ statement
     | Break Semicolon
     | Continue Semicolon
     | Return expression? Semicolon
-    | LeftCurly statement* RightCurly
     | expression Semicolon
     ;
 

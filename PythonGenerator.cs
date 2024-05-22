@@ -59,15 +59,23 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
 
     public override string VisitStatement([NotNull] CGrammarParser.StatementContext context) {
         result.Add("");
-        pr(context);
+        // pr(context);
         Console.WriteLine("-------------");
-        if(context.structDeclaration() != null) {
-            result[^1] += Visit(context.structDeclaration()); // class in function in python? does not work
+        if(context.LeftCurly() != null) {
+            Console.WriteLine("-----------------------------------------------------------");
+            for(int i=1; i<context.ChildCount - 1; i++) {
+                Console.WriteLine(context.GetChild(i).GetType() + "   " + context.GetChild(i).GetText());
+                result[^1] += Visit(context.GetChild(i)) + "\n";
+            }
+            Console.WriteLine("-----------------------------------------------------------");
+        }
+        else if(context.structDeclaration().Length != 0) {
+            result[^1] += Visit(context.structDeclaration(0)); // class in function in python? does not work
         }
         else if(context.For() != null) {
             result[^1] += indent + "while True:\n";
             indent++;
-            string variable = Visit(context.variableDeclaration());
+            string variable = Visit(context.variableDeclaration(0));
             result[^1] += variable + "\n"; // brak obsługi expression
             result[^1] += indent + "if ";
             result[^1] += Visit(context.expression()[0]) + ":\n";
@@ -78,8 +86,8 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
             result[^1] += Visit(context.expression(1)) + "\n";
             indent--;
         }
-        else if(context.variableDeclaration() != null) {
-            result[^1] += Visit(context.variableDeclaration());
+        else if(context.variableDeclaration().Length != 0) {
+            result[^1] += Visit(context.variableDeclaration(0));
         }
         // if(context.LeftCurly() != null) {
         //     result.Add("");
@@ -120,12 +128,7 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
         else if(context.Return() != null) {
             result[^1] += indent + "return " + Visit(context.expression()[0]) + "\n";
         }
-        else if(context.LeftCurly() != null) {
-            for(int i=0; i<context.statement().Length; i++) {
-                result[^1] += Visit(context.statement(i)) + "\n";
-            }
-        }
-        else {
+        else if(context.expression().Length != 0) {
             result[^1] += Visit(context.expression(0));
         }
         return ret();
