@@ -33,9 +33,8 @@ variableDeclaration
     ;
 
 statement
-    : LeftCurly 
-        (variableDeclaration | structDeclaration | statement)*
-        RightCurly
+    : structDeclaration
+    | variableDeclaration
     | If LeftRound expression RightRound statement
         (Else statement)?
     | While LeftRound expression RightRound statement
@@ -50,8 +49,30 @@ statement
     | Break Semicolon
     | Continue Semicolon
     | Return expression? Semicolon
-    | expression? Semicolon
+    | LeftCurly statement* RightCurly
+    | expression Semicolon
     ;
+
+    // statement
+    // : LeftCurly 
+    //     (variableDeclaration | structDeclaration | statement)*
+    //     RightCurly
+    // | If LeftRound expression RightRound statement
+    //     (Else statement)?
+    // | While LeftRound expression RightRound statement
+    // | Do statement
+    //     While LeftRound expression RightRound
+    //     Semicolon
+    // | For LeftRound
+    //     (expression? Semicolon | variableDeclaration)
+    //     expression? Semicolon
+    //     expression? RightRound
+    //     statement
+    // | Break Semicolon
+    // | Continue Semicolon
+    // | Return expression? Semicolon
+    // | expression? Semicolon
+    // ;
 
 expression
     : LeftRound expression RightRound
@@ -66,7 +87,7 @@ expression
     | expression And expression
     | expression Or expression
     | lvalue assignOperator expression
-    | expression Comma expression
+    | expression Comma expression // ??
     | CharLiteral
     | StringLiteral
     | IntLiteral

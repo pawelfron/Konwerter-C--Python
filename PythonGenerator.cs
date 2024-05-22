@@ -15,12 +15,11 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
 
     public override string VisitProgram([NotNull] CGrammarParser.ProgramContext context) {
         result.Add("");
-        pr(context);
         for(int i=0; i<context.ChildCount; i++) {
-            result[^1] += Visit(context.GetChild(i)) + "\n";
+            result[^1] += Visit(context.GetChild(i));
         }
 
-        result[^1] += indent + "\n\nmain()";
+        result[^1] += "\n\nmain()";
         return ret();
     }
 
@@ -65,9 +64,33 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
         if(context.structDeclaration() != null) {
             result[^1] += Visit(context.structDeclaration()); // class in function in python? does not work
         }
+        else if(context.For() != null) {
+            result[^1] += indent + "while True:\n";
+            indent++;
+            string variable = Visit(context.variableDeclaration());
+            result[^1] += variable + "\n"; // brak obsługi expression
+            result[^1] += indent + "if ";
+            result[^1] += Visit(context.expression()[0]) + ":\n";
+            indent++;
+            result[^1] += indent + "break\n";
+            indent--;
+            result[^1] += Visit(context.statement(0)) + "\n";
+            result[^1] += Visit(context.expression(1)) + "\n";
+            indent--;
+        }
         else if(context.variableDeclaration() != null) {
             result[^1] += Visit(context.variableDeclaration());
         }
+        // if(context.LeftCurly() != null) {
+        //     result.Add("");
+        //     for(int i=0; i<context.ChildCount; i++) {
+        //         if(context.GetChild(i) is CGrammarParser.StatementContext
+        //         || context.GetChild(i) is CGrammarParser.VariableDeclarationContext
+        //         || context.GetChild(i) is CGrammarParser.StructDeclarationContext) {
+        //             result[^1] += Visit(context.GetChild(i)) + "\n";
+        //         }
+        //     }
+        // }
         else if(context.If() != null) {
             result[^1] += indent + "if ";
             result[^1] += Visit(context.expression()[0]) + ":\n";
@@ -82,32 +105,20 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
             }
         }
         else if(context.While() != null) {
-            result[^1] += indent + "while " + Visit(context.expression()[0]) + ":\n";
+            result[^1] += indent + "while ";
+            result[^1] += Visit(context.expression()[0]) + ":\n";
             indent++;
             result[^1] += Visit(context.statement(0)) + "\n";
-            indent--;
-        }
-        else if(context.For() != null) {
-            result[^1] += indent + "while True:\n";
-            indent++;
-            string variable = Visit(context.variableDeclaration());
-            result[^1] += variable + "\n"; // brak obsługi expression
-            result[^1] += indent + "if" + Visit(context.expression()[0]) + ":\n";
-            indent++;
-            result[^1] += indent + "break\n";
-            indent--;
-            result[^1] += Visit(context.statement(0)) + "\n";
-            result[^1] += Visit(context.expression()[1]) + "\n";
             indent--;
         }
         else if(context.Break() != null) {
-            result[^1] += indent + "break";
+            result[^1] += indent + "break\n";
         }
         else if(context.Continue() != null) {
-            result[^1] += indent + "continue";
+            result[^1] += indent + "continue\n";
         }
         else if(context.Return() != null) {
-            result[^1] += indent + "return " + Visit(context.expression()[0]);
+            result[^1] += indent + "return " + Visit(context.expression()[0]) + "\n";
         }
         else if(context.LeftCurly() != null) {
             for(int i=0; i<context.statement().Length; i++) {
@@ -143,12 +154,6 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
 
     public override string VisitExpression([NotNull] CGrammarParser.ExpressionContext context) {
         result.Add("");
-        result[^1] += Visit(context.GetChild(0)); // todo
-        return ret();
-    }
-
-    public override string VisitRvalue([NotNull] CGrammarParser.RvalueContext context) {
-        result.Add("");
         for(int i=0; i<context.ChildCount; i++) {
             if(context.GetChild(i) is TerminalNodeImpl) {
             result[^1] += indent + context.GetChild(i).GetText();
@@ -159,6 +164,63 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
         }
         return ret(); // todo
     }
+
+    public override string VisitLvalue([NotNull] CGrammarParser.LvalueContext context) {
+        result.Add("");
+        if(context.LeftRound() != null) {
+            result[^1] += indent + "(";
+            result[^1] += Visit(context.lvalue());
+            result[^1] += indent + ")";
+        }
+        else if(context.Access() != null) {
+            result[^1] += Visit(context.lvalue());
+            result[^1] += indent +  ".";
+            result[^1] += context.Identifier().GetText();
+        }
+        else if(context.LeftSquare() != null) {
+            result[^1] += Visit(context.lvalue());
+            result[^1] += indent + "[";
+            result[^1] += Visit(context.expression());
+            result[^1] += indent + "]";
+        }
+        else if(context.Identifier() != null){
+            result[^1] += indent + context.Identifier().GetText();
+        }
+        else if(context.Add() != null || context.Subtract() != null) {
+            result[^1] += Visit(context.lvalue());
+            result[^1] += indent + context.GetChild(1).GetText();
+            result[^1] += Visit(context.expression());
+        }
+        return ret();
+    }
+
+    public override string VisitAssignOperator([NotNull] CGrammarParser.AssignOperatorContext context) {
+        result.Add("");
+        if(context.Assign() != null) {
+            result[^1] += "=";
+        }
+        else if(context.AssignAdd() != null) {
+            result[^1] += "+=";
+        }
+        else if(context.AssignSubtract() != null) {
+            result[^1] += "-=";
+        }
+        else if(context.AssignMultiply() != null) {
+            result[^1] += "*=";
+        }
+        else if(context.AssignDivide() != null) {
+            result[^1] += "/=";
+        }
+        else if(context.AssignModulo() != null) {
+            result[^1] += "%=";
+        }
+        else {
+            result[^1] += "ERROR";
+        }
+        return ret();
+    }
+
+
 
     public string ret() {
         string str = result[^1];
@@ -176,6 +238,11 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
         }
     }
 }
+
+
+
+
+
 
 public class Indent {
     public int count = 0;
