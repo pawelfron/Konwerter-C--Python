@@ -76,7 +76,7 @@ statement
 
 expression
     : LeftRound expression RightRound
-    | lvalue LeftRound expression? RightRound
+    | lvalue LeftRound expression? RightRound // lvalue LeftRound expression? RightRound
     | Address lvalue
     | (Add | Subtract | Not ) expression
     | LeftRound type RightRound expression
@@ -213,3 +213,4 @@ Colon           : ':';
 Comma           : ',';
 
 Whitespace      : [ \t\r\n\f]+ -> skip;
+Comment         : '//' ~[\r\n]* -> skip;

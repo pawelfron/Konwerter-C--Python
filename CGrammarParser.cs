@@ -44,7 +44,8 @@ public partial class CGrammarParser : Parser {
 		AssignModulo=33, Add=34, Subtract=35, Multiply=36, Divide=37, Modulo=38, 
 		Equal=39, NotEqual=40, Less=41, LessOrEqual=42, Greater=43, GreaterOrEqual=44, 
 		And=45, Or=46, Not=47, LeftRound=48, RightRound=49, LeftSquare=50, RightSquare=51, 
-		LeftCurly=52, RightCurly=53, Semicolon=54, Colon=55, Comma=56, Whitespace=57;
+		LeftCurly=52, RightCurly=53, Semicolon=54, Colon=55, Comma=56, Whitespace=57, 
+		Comment=58;
 	public const int
 		RULE_program = 0, RULE_includeStatement = 1, RULE_declaration = 2, RULE_functionDeclaration = 3, 
 		RULE_structDeclaration = 4, RULE_variableDeclaration = 5, RULE_statement = 6, 
@@ -72,7 +73,7 @@ public partial class CGrammarParser : Parser {
 		"Add", "Subtract", "Multiply", "Divide", "Modulo", "Equal", "NotEqual", 
 		"Less", "LessOrEqual", "Greater", "GreaterOrEqual", "And", "Or", "Not", 
 		"LeftRound", "RightRound", "LeftSquare", "RightSquare", "LeftCurly", "RightCurly", 
-		"Semicolon", "Colon", "Comma", "Whitespace"
+		"Semicolon", "Colon", "Comma", "Whitespace", "Comment"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -1741,7 +1742,7 @@ public partial class CGrammarParser : Parser {
 	}
 
 	private static int[] _serializedATN = {
-		4,1,57,263,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
+		4,1,58,263,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
 		7,7,2,8,7,8,2,9,7,9,2,10,7,10,1,0,1,0,5,0,25,8,0,10,0,12,0,28,9,0,1,0,
 		1,0,1,1,1,1,1,1,1,2,1,2,1,2,3,2,38,8,2,1,3,1,3,1,3,1,3,1,3,1,3,1,3,1,3,
 		1,3,5,3,49,8,3,10,3,12,3,52,9,3,3,3,54,8,3,1,3,1,3,1,3,3,3,59,8,3,1,4,

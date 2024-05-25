@@ -1,7 +1,10 @@
 using System.ComponentModel;
 using System.Net.Http.Headers;
 using Antlr4.Runtime;
+using Antlr4.Runtime.Atn;
+using Antlr4.Runtime.Dfa;
 using Antlr4.Runtime.Misc;
+using Antlr4.Runtime.Sharpen;
 using Antlr4.Runtime.Tree;
 
 public class PythonGenerator : CGrammarBaseVisitor<string> {
@@ -15,6 +18,15 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
 
     public override string VisitProgram([NotNull] CGrammarParser.ProgramContext context) {
         result.Add("");
+        result[^1] += "def printf(*args):\n";
+        indent++;
+        result[^1] += indent + "s = args[0]\n";
+        result[^1] += indent + "for i in args[1:]:\n";
+        indent++;
+        result[^1] += indent + "s = s.replace(s[s.find('%'):s.find('%')+2], str(i), 1)\n";
+        indent--;
+        result[^1] += indent + "print(s)\n";
+        indent--;
         for(int i=0; i<context.ChildCount; i++) {
             result[^1] += Visit(context.GetChild(i));
         }
@@ -59,49 +71,29 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
 
     public override string VisitStatement([NotNull] CGrammarParser.StatementContext context) {
         result.Add("");
-        // pr(context);
-        Console.WriteLine("-------------");
         if(context.LeftCurly() != null) {
-            Console.WriteLine("-----------------------------------------------------------");
             for(int i=1; i<context.ChildCount - 1; i++) {
-                Console.WriteLine(context.GetChild(i).GetType() + "   " + context.GetChild(i).GetText());
                 result[^1] += Visit(context.GetChild(i)) + "\n";
             }
-            Console.WriteLine("-----------------------------------------------------------");
         }
         else if(context.structDeclaration().Length != 0) {
             result[^1] += Visit(context.structDeclaration(0)); // class in function in python? does not work
         }
         else if(context.For() != null) {
-            result[^1] += indent + "while True:\n";
+            result[^1] += Visit(context.variableDeclaration(0)) + "\n";
+            result[^1] += indent + "while ";
+            result[^1] += Visit(context.expression(0));
+            result[^1] += ":\n";
             indent++;
-            string variable = Visit(context.variableDeclaration(0));
-            result[^1] += variable + "\n"; // brak obsługi expression
-            result[^1] += indent + "if ";
-            result[^1] += Visit(context.expression()[0]) + ":\n";
-            indent++;
-            result[^1] += indent + "break\n";
-            indent--;
-            result[^1] += Visit(context.statement(0)) + "\n";
-            result[^1] += Visit(context.expression(1)) + "\n";
-            indent--;
+            result[^1] += Visit(context.statement(0));
+            result[^1] += Visit(context.expression(1));
         }
         else if(context.variableDeclaration().Length != 0) {
             result[^1] += Visit(context.variableDeclaration(0));
         }
-        // if(context.LeftCurly() != null) {
-        //     result.Add("");
-        //     for(int i=0; i<context.ChildCount; i++) {
-        //         if(context.GetChild(i) is CGrammarParser.StatementContext
-        //         || context.GetChild(i) is CGrammarParser.VariableDeclarationContext
-        //         || context.GetChild(i) is CGrammarParser.StructDeclarationContext) {
-        //             result[^1] += Visit(context.GetChild(i)) + "\n";
-        //         }
-        //     }
-        // }
         else if(context.If() != null) {
             result[^1] += indent + "if ";
-            result[^1] += Visit(context.expression()[0]) + ":\n";
+            result[^1] += Visit(context.expression(0)) + ":\n";
             indent++;
             result[^1] += Visit(context.statement(0)); // + "\n";
             indent--;
@@ -114,7 +106,7 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
         }
         else if(context.While() != null) {
             result[^1] += indent + "while ";
-            result[^1] += Visit(context.expression()[0]) + ":\n";
+            result[^1] += Visit(context.expression(0)) + ":\n";
             indent++;
             result[^1] += Visit(context.statement(0)) + "\n";
             indent--;
@@ -126,7 +118,8 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
             result[^1] += indent + "continue\n";
         }
         else if(context.Return() != null) {
-            result[^1] += indent + "return " + Visit(context.expression()[0]) + "\n";
+            result[^1] += indent + "return ";
+            result[^1] += Visit(context.expression(0)) + "\n";
         }
         else if(context.expression().Length != 0) {
             result[^1] += Visit(context.expression(0));
@@ -223,6 +216,13 @@ public class PythonGenerator : CGrammarBaseVisitor<string> {
         return ret();
     }
 
+    public override string VisitIncludeStatement([NotNull] CGrammarParser.IncludeStatementContext context) {
+        return "";
+    }
+
+    public override string VisitType([NotNull] CGrammarParser.TypeContext context) {
+        return "";
+    }
 
 
     public string ret() {
@@ -272,5 +272,12 @@ public class Indent {
         else {
             return "";
         }
+    }
+}
+
+public class ThrowingErrorListener : BaseErrorListener {
+
+    public override void SyntaxError(TextWriter output, IRecognizer recognizer, IToken offendingSymbol, int line, int charPositionInLine, string msg, RecognitionException e) {
+        Console.WriteLine("Błąd składni w linii " + line + " na pozycji " + charPositionInLine + ":\n" + msg);
     }
 }

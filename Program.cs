@@ -8,6 +8,8 @@ public class Program {
         ITokenSource lexer = new CGrammarLexer(stream);
         ITokenStream tokens = new CommonTokenStream(lexer);
         CGrammarParser parser = new CGrammarParser(tokens);
+        parser.RemoveErrorListeners();
+        parser.AddErrorListener(new ThrowingErrorListener());
         IParseTree tree = parser.program();
         PythonGenerator visitor = new PythonGenerator();
         string pythonCode = visitor.Visit(tree);

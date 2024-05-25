@@ -55,6 +55,7 @@ Semicolon=54
 Colon=55
 Comma=56
 Whitespace=57
+Comment=58
 '#include'=1
 'if'=2
 'else'=3

@@ -1,24 +1,26 @@
+def printf(*args):
+    s = args[0]
+    for i in args[1:]:
+        s = s.replace(s[s.find('%'):s.find('%')+2], str(i), 1)
+    print(s)
+def fibb(n):
+    if n==0:
+        return 0
+
+
+    if n==1:
+        return 1
+
+
+    result=fibb(n-1)+fibb(n-2)
+    printf("dla n=%d fibb=%d",n,result)
+    return result
+
+
 def main():
-    a=1+2
-    if 3!=4:
-        b=2
-    else:
-        if 2==2:
-            c=None
-
-    while a<10:
-        a=a+1
-        a+=1
-
-
-    while True:
-        i=0
-        if i<10:
-            break
-        a=a-1
-
-        i+=2
-
+    n=7+3
+    result=fibb(n)
+    printf("\n\nWynik dla n = %d to %d\n",n,result)
 
 
 
