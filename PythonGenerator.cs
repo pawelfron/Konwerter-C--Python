@@ -8,6 +8,7 @@ using Antlr4.Runtime.Sharpen;
 using Antlr4.Runtime.Tree;
 
 public class PythonGenerator : CGrammarBaseVisitor<string> {
+    public static string? error = null;
 
     Indent indent;
     public List<string> result = new List<string>();
@@ -278,6 +279,6 @@ public class Indent {
 public class ThrowingErrorListener : BaseErrorListener {
 
     public override void SyntaxError(TextWriter output, IRecognizer recognizer, IToken offendingSymbol, int line, int charPositionInLine, string msg, RecognitionException e) {
-        Console.WriteLine("Błąd składni w linii " + line + " na pozycji " + charPositionInLine + ":\n" + msg);
+        PythonGenerator.error = "Błąd składni w linii " + line + " na pozycji " + charPositionInLine + ":\n" + msg;
     }
 }
