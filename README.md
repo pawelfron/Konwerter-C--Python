@@ -20,7 +20,7 @@ Język przetwarzany przez konwerter jest zdefiniowany przez dołączoną do proj
 # Krótka instrukcja obsługi
 Aby uruchomić aplikację, należy:
 1. Sklonować repozytorium, przejść do katalogu głównego i wykonać polecenie dotnet run.
-2. Kod w C, który chcemy przekonwertować, należy wpisać do pola tekstowego po lewej stronie i wcisnąć przycisk Przekonwertuj i wykonaj.
+2. Kod w C, który chcemy przekonwertować, należy wpisać do pola tekstowego po lewej stronie i wcisnąć przycisk *Przekonwertuj i wykonaj*.
 3. W środkowym polu pojawi się wynikowy kod w Pythonie, a po prawej efekt wykonania aplikacji.
 
 
