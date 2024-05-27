@@ -15,7 +15,7 @@ Język przetwarzany przez konwerter jest zdefiniowany przez dołączoną do proj
 * brak instrukcji preprocesora, z wyjątkiem `#include`,
 * brak możliwości deklaracji unii, enumeracji i `typedef`,
 * brak następujących specyfikatorów: `register`, `static`, `extern`, `volataile`, `restrict`, `inline`,
-* brak następujących operatorów: `++`, `--`, `~`, `<<`, `>>`, `&`, `|`, `^`, `<<=`, `>>=`, `&=`, `|=`, `^=`, `? :`, `sizeof`
+* brak następujących operatorów: `++`, `--`, `~`, `<<`, `>>`, `&`, `|`, `^`, `<<=`, `>>=`, `&=`, `|=`, `^=`, `? :`, `sizeof`.
 
 # Autorzy
 Paweł Froń, Jakub Grzyb
