@@ -5,7 +5,7 @@ Projekt na przedmiot "Teoria kompilacji i kompilatory". Informatyka i Systemy In
 Projekt jest aplikacją okienkową, umożliwiającą konwertowanie kodu napisanego w uproszczonym wariancie języka C, do kodu Pythona.
 
 # Implementacja
-Konwerter jest napisany w C#, z użyciem narzędzia [ANTLR4](https://www.antlr.org/index.html) oraz [Windows Forms](https://learn.microsoft.com/pl-pl/dotnet/desktop/winforms/overview/?view=netdesktop-8.0).
+Konwerter jest napisany w C#, z użyciem narzędzia [ANTLR4](https://www.antlr.org/index.html) oraz Windows Forms.
 
 # Przetwarzany język
 Język przetwarzany przez konwerter jest zdefiniowany przez dołączoną do projektu [gramatykę](CGrammar.g4). Najważniejsze różnice względem oryginalnego C to:
