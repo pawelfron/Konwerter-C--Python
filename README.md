@@ -23,6 +23,47 @@ Aby uruchomić aplikację, należy:
 2. Kod w C, który chcemy przekonwertować, należy wpisać do pola tekstowego po lewej stronie i wcisnąć przycisk *Przekonwertuj i wykonaj*.
 3. W środkowym polu pojawi się wynikowy kod w Pythonie, a po prawej efekt wykonania aplikacji.
 
+# Przykład - kod z C do Pythona
+```C
+    #include<stdio.h>
+    int fibb(int n) {
+        if(n == 0) {
+            return 0;
+        }
+        if(n == 1) {
+            return 1;
+        }
+        int result = fibb(n-1) + fibb(n-2);
+        printf("dla n=%d fibb=%d", n, result);
+        return result;
+    }
+
+    int main() {
+        int n = 7 + 3;
+        int result = fibb(n); // hello there
+        printf("\n\nWynik dla n = %d to %d\n", n, result);
+    }
+```
+```python
+    def printf(*args):
+        s = args[0]
+        for i in args[1:]:
+            s = s.replace(s[s.find('%'):s.find('%')+2], str(i), 1)
+        print(s)
+    def fibb(n):
+        if n==0:
+            return 0
+        if n==1:
+            return 1
+        result=fibb(n-1)+fibb(n-2)
+        printf("dla n=%d fibb=%d",n,result)
+        return result
+    def main():
+        n=7+3
+        result=fibb(n)
+        printf("\n\nWynik dla n = %d to %d\n",n,result)
+    main()
+```
 
 # Autorzy
 Paweł Froń, Jakub Grzyb
